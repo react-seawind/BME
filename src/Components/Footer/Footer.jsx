@@ -165,12 +165,34 @@ function Footer() {
         <div className="border-b border-[#666666] pt-10"></div>
 
         <div className="social flex mt-8 justify-center pb-8 ">
-          <FaFacebookF className="mx-1 bg-[#666666] hover:bg-white text-4xl p-2 rounded-full" />
-          <FaXTwitter className="mx-1 bg-[#666666] hover:bg-white text-4xl p-2 rounded-full" />
-          <FaInstagram className="mx-1 bg-[#666666] hover:bg-white text-4xl p-2 rounded-full" />
-          <FaYoutube className="mx-1 bg-[#666666] hover:bg-white text-4xl p-2 rounded-full" />
-          <FaPinterestP className="mx-1 bg-[#666666] hover:bg-white text-4xl p-2 rounded-full" />
-          <FaLinkedinIn className="mx-1 bg-[#666666] hover:bg-white text-4xl p-2 rounded-full" />
+          <Link>
+            <FaFacebookF className="mx-1 bg-[#666666] hover:bg-white text-4xl p-2 rounded-full" />
+          </Link>
+          <Link>
+            <FaXTwitter className="mx-1 bg-[#666666] hover:bg-white text-4xl p-2 rounded-full" />
+          </Link>
+          <Link>
+            <FaInstagram className="mx-1 bg-[#666666] hover:bg-white text-4xl p-2 rounded-full" />
+          </Link>
+          <Link>
+            <FaYoutube className="mx-1 bg-[#666666] hover:bg-white text-4xl p-2 rounded-full" />
+          </Link>
+          <Link>
+            <FaPinterestP className="mx-1 bg-[#666666] hover:bg-white text-4xl p-2 rounded-full" />
+          </Link>
+          <Link>
+            <FaLinkedinIn className="mx-1 bg-[#666666] hover:bg-white text-4xl p-2 rounded-full" />
+          </Link>
+        </div>
+        <div className="text-center pb-8 text-white">
+          © Book My Event Design and Develop By {"  "}
+          <Link
+            to={"www.seawindsolution.com"}
+            className="text-themecolor1"
+            target="_blank"
+          >
+            Seawind Solution Pvt. Ltd.
+          </Link>
         </div>
       </footer>
     </div>

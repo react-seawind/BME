@@ -417,16 +417,16 @@ function Home() {
           <Slider {...featured}>
             {featuredeventdata.map((val, index) => {
               return (
-                <div>
+                <div className="">
                   <div key={index}>
-                    <div className="max-w-sm rounded overflow-hidden mx-4">
+                    <div className="max-w-sm overflow-hidden mx-4 border border-themecolor1 rounded-md">
                       <Link>
                         <img
                           className="xl:h-96 lg:h-80 surface:h-80 rounded-md h-72 md:h-60 w-full"
                           src={val.img}
                           alt=""
                         />
-                        <div className=" md:py-4 py-2">
+                        <div className=" pt-3">
                           <div className="flex md:text-sm text-xs font-semibold mb-2">
                             <p className="md:text-xl text-sm mx-1">
                               <FcCalendar />
@@ -441,18 +441,18 @@ function Home() {
                             <h1>{val.tittle2}</h1>
                           </div>
 
-                          <div className="flex text-sm font-semibold mb-2 bg-pink-100 rounded-md py-1">
+                          <div className="flex text-sm font-semibold  bg-pink-100 rounded-md py-1">
                             <h1 className="md:pl-1 pl-1 mr-auto my-auto">
                               ₹ {val.price}
                             </h1>
 
                             <button className="">
-                              <a
-                                href="/steps1"
+                              <Link
+                                to="/steps1"
                                 className="text-lg font-bold border-l-2 border-pink-400 md:pl-2 pl-1 pr-1"
                               >
                                 BUY NOW
-                              </a>
+                              </Link>
                             </button>
                           </div>
                         </div>
@@ -485,7 +485,7 @@ function Home() {
                 <div>
                   <div key={index}>
                     <Link>
-                      <div className="max-w-sm overflow-hidden mx-4">
+                      <div className="max-w-sm overflow-hidden mx-4 border border-themecolor1 rounded-md">
                         <div className="rounded-xl">
                           <img
                             className="xl:h-96 lg:h-80 surface:h-80 rounded-md h-72 md:h-60 w-full"
@@ -565,7 +565,7 @@ function Home() {
                       />
 
                       {/* <p className="text-white bg-black py-4">{val.date}</p> */}
-                      <div className="px-0 md:py-4 py-2">
+                      <div className="px-0 pt-3">
                         <div className="font-semibold text-lg mb-2 text-black">
                           <h1 className="md:font-bold font-semibold md:text-base text-sm line-clamp-1  ">
                             {val.tittle}
