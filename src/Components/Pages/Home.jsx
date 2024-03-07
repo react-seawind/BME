@@ -5,6 +5,7 @@ import { FcCalendar } from "react-icons/fc";
 import { FaCirclePlay } from "react-icons/fa6";
 
 import { IoIosArrowForward } from "react-icons/io";
+
 import {
   HomeSLiderData,
   NewExperiencedata,
