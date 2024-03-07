@@ -4,7 +4,7 @@ import BannerLst1 from "../../Images/bannerlst1.jpg";
 import BannerLst2 from "../../Images/bannerlst2.jpg";
 import BannerLst3 from "../../Images/bannerlst3.jpg";
 import BannerLst4 from "../../Images/bannerlst4.jpg";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { RxCross1 } from "react-icons/rx";
 import { hostdata, servicesofferdata } from "../API";
 

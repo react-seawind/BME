@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Stepper, Step } from "react-form-stepper";
+import { Stepper } from "react-form-stepper";
 import { MdCurrencyRupee } from "react-icons/md";
-import { FaEarthAsia, FaMinus, FaPlus } from "react-icons/fa6";
+import { FaMinus, FaPlus } from "react-icons/fa6";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 

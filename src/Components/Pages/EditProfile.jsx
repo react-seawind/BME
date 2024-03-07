@@ -1,15 +1,8 @@
 import React, { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-import { GoPencil } from "react-icons/go";
-// import StreamImg from "../../Images/streamimg.png";
 
 function EditProfile() {
   const [openTab, setOpenTab] = React.useState(4);
-
-  const [tabGen, setTabGen] = useState();
-
-  const [tabYN, setTabYN] = useState();
-
   const [yourOrder, setYourOrder] = React.useState(1);
 
   const [showModal, setShowModal] = React.useState(false);

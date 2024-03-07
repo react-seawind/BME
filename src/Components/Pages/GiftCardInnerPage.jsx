@@ -1,7 +1,4 @@
 import React from "react";
-import GiftCardBg from "../../Images/giftcardbg.png";
-import { MdCurrencyRupee } from "react-icons/md";
-import GiftCardImg from "../../Images/giftcard.png";
 
 function GiftCardInnerPage() {
   return (

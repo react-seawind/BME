@@ -1,12 +1,10 @@
 import React from "react";
 import "./Offers.css";
-import { MdLaptop } from "react-icons/md";
-import { ImMobile2 } from "react-icons/im";
 import { CiCreditCard1 } from "react-icons/ci";
 import { IoTicketOutline } from "react-icons/io5";
 import { IoWalletOutline } from "react-icons/io5";
 import { GoTrophy } from "react-icons/go";
-import { FaGooglePay, FaSearch } from "react-icons/fa";
+import { FaGooglePay } from "react-icons/fa";
 import {
   bookmyeventdata,
   creditcarddata,
