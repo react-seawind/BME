@@ -1,0 +1,85 @@
+body {
+  overflow-x: hidden;
+}
+
+.slick-prev,
+.slick-next {
+  width: 35px !important;
+  height: 35px !important;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  z-index: 2;
+}
+
+.slick-next {
+  right: 0px !important;
+}
+
+.slick-prev {
+  left: 0px !important;
+}
+
+
+.overlay {
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.contain:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.bottomNavbar .active {
+  color: #DC3548;
+}
+
+@media only screen and (max-width: 375px) {}
+
+@media only screen and (max-width: 320px) {}
+
+@media only screen and (max-width: 600px) {}
+
+@media only screen and (max-width: 768px) {}
+
+
+@media (min-width:992px) and (max-width:1199px) {
+
+  .slick-prev,
+  .slick-next {
+    margin: 0px 26px 0px 26px;
+  }
+
+  .browselogo h1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  button.cityDropDown {
+    margin-left: 45rem;
+  }
+
+  .social {
+    margin-left: 32rem;
+  }
+
+  .btn button {
+    margin-left: 12rem;
+  }
+
+  .InnerNavPills {
+    width: 31%;
+  }
+}
+
+
+@media (min-width:768px) and (max-width:991px) {}
+
+@media (max-width:767px) {}
+
+@media (max-width:420px) {}
