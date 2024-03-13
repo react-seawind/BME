@@ -77,13 +77,13 @@ export default function ForgotPassword() {
 
             <div className="grid grid-cols-2 gap-2 ">
               <Link
-                to={"/doitsignin"}
+                to={"/BME/doitsignin"}
                 className="py-2 bg-[#3E6EEA]  text-white text-center  font-bold rounded-md mt-6 "
               >
                 Back
               </Link>
               <Link
-                to={"/doitotp"}
+                to={"/BME/doitotp"}
                 className="py-2 bg-[#3E6EEA]  text-white text-center font-bold rounded-md mt-6 "
               >
                 Send OTP
@@ -93,7 +93,10 @@ export default function ForgotPassword() {
             <div className="text-center mt-10">
               <p>
                 Already Have Account ?{" "}
-                <Link to={"/doitsignin"} className="text-[#3E6EEA] font-bold">
+                <Link
+                  to={"/BME/doitsignin"}
+                  className="text-[#3E6EEA] font-bold"
+                >
                   Sign In
                 </Link>
               </p>

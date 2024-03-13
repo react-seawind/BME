@@ -13,15 +13,15 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   const eventincitiesdata = [
-    { des: "Events in Mumbai", link: "" },
-    { des: "Events in Delhi-NCR", link: "" },
-    { des: "Events in Chennai", link: "" },
-    { des: "Events in Bengaluru", link: "" },
-    { des: "Events in Hyderabad", link: "" },
-    { des: "Events in Pune", link: "" },
-    { des: "Events in Ahmedabad", link: "" },
-    { des: "Events in Kolkata", link: "" },
-    { des: "Events in Kochi", link: "" },
+    { des: "Events in Mumbai", link: "/BME/event" },
+    { des: "Events in Delhi-NCR", link: "/BME/event" },
+    { des: "Events in Chennai", link: "/BME/event" },
+    { des: "Events in Bengaluru", link: "/BME/event" },
+    { des: "Events in Hyderabad", link: "/BME/event" },
+    { des: "Events in Pune", link: "/BME/event" },
+    { des: "Events in Ahmedabad", link: "/BME/event" },
+    { des: "Events in Kolkata", link: "/BME/event" },
+    { des: "Events in Kochi", link: "/BME/event" },
   ];
 
   const countriesdata = [
@@ -33,13 +33,13 @@ function Footer() {
   ];
 
   const helpdata = [
-    { des: "About Us", link: "" },
-    { des: "Contact Us", link: "" },
+    { des: "About Us", link: "/BME/about" },
+    { des: "Contact Us", link: "/BME/contact" },
     { des: "Current Opening", link: "" },
     { des: "Press Release", link: "" },
     { des: "Press Coverage", link: "" },
     { des: "Sitemap", link: "" },
-    { des: "FAQS", link: "" },
+    { des: "FAQS", link: "/BME/faq" },
     { des: "Terms and Conditions", link: "" },
     { des: "Privacy Policy", link: "" },
   ];
@@ -61,7 +61,7 @@ function Footer() {
             </p>
           </div>
           <div className="lg:ml-auto lg:mx-0 sm:flex justify-center">
-            <button className="bg-[#EC5E71] text-white my-5   py-2 px-3   rounded-lg">
+            <button className="bg-themecolor1 text-white my-5   py-2 px-3   rounded-lg">
               Contact today
             </button>
           </div>

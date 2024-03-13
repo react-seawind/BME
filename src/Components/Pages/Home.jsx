@@ -448,7 +448,7 @@ function Home() {
 
                             <button className="">
                               <Link
-                                to="/steps1"
+                                to="/BME/steps1"
                                 className="text-lg font-bold border-l-2 border-pink-400 md:pl-2 pl-1 pr-1"
                               >
                                 BUY NOW

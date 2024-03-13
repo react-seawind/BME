@@ -94,12 +94,15 @@ const OTP = () => {
 
               <div className="grid grid-cols-2 gap-2 ">
                 <Link
-                  to={"/doitsignup"}
+                  to={"/BME/doitsignup"}
                   className="py-2 bg-[#3E6EEA]  text-white text-center  font-bold rounded-md mt-6 "
                 >
                   Back
                 </Link>
-                <Link className="py-2 bg-[#3E6EEA]  text-white text-center font-bold rounded-md mt-6 ">
+                <Link
+                  to={"/BME/kyc-1"}
+                  className="py-2 bg-[#3E6EEA]  text-white text-center font-bold rounded-md mt-6 "
+                >
                   Submit
                 </Link>
               </div>
@@ -107,7 +110,10 @@ const OTP = () => {
               <div className="text-center mt-10">
                 <p>
                   Don't have account ?{" "}
-                  <Link to={"/doitsignup"} className="text-[#3E6EEA] font-bold">
+                  <Link
+                    to={"/BME/doitsignup"}
+                    className="text-[#3E6EEA] font-bold"
+                  >
                     Sign Up
                   </Link>
                 </p>

@@ -149,7 +149,7 @@ export default function ListYourShow() {
                     <h1 className="py-2 md:text-2xl font-bold text-center w-full text-[#333333] line-clamp-1">
                       {val.tittle}
                     </h1>
-                    <p className="flex justify-center text-3xl text-[#EC5E71]">
+                    <p className="flex justify-center text-3xl text-themecolor1">
                       {val.logo}
                     </p>
                   </Link>
@@ -211,11 +211,11 @@ export default function ListYourShow() {
                       </div>
                       {/*footer*/}
                       <Link
-                        to="/doitsignup"
+                        to="/BME/doitsignup"
                         target="_blank"
                         className="block m-auto"
                       >
-                        <button className="bg-[#EC5E71] mx-20 py-3 my-3 mb-7 px-14 text-white rounded-md font-semibold">
+                        <button className="bg-themecolor1 mx-20 py-3 my-3 mb-7 px-14 text-white rounded-md font-semibold">
                           List your show
                         </button>
                       </Link>
@@ -228,8 +228,8 @@ export default function ListYourShow() {
           </div>
         </div>
       </div>
-      <Link to="/doitsignup" target="_blank">
-        <button className="block m-auto md:my-10 my-5 bg-[#EC5E71] px-20 py-3 rounded-lg text-white font-semibold">
+      <Link to="/BME/doitsignup" target="_blank">
+        <button className="block m-auto md:my-10 my-5 bg-themecolor1 px-20 py-3 rounded-lg text-white font-semibold">
           List Your Show
         </button>
       </Link>
@@ -262,7 +262,7 @@ export default function ListYourShow() {
                       <h1 className="p-2 md:text-2xl font-bold text-center w-full text-[#333333]  md:line-clamp-1 line-clamp-none">
                         {val.tittle}
                       </h1>
-                      <p className="flex justify-center text-3xl py-2 text-[#EC5E71]">
+                      <p className="flex justify-center text-3xl py-2 text-themecolor1">
                         {val.logo}
                       </p>
                     </Link>
@@ -339,11 +339,11 @@ export default function ListYourShow() {
                       </div>
                       {/*footer*/}
                       <Link
-                        to="/doitsignup"
+                        to="/BME/doitsignup"
                         target="_blank"
                         className="block m-auto"
                       >
-                        <button className="bg-[#EC5E71] mx-20 py-3 my-3 mb-7 px-14 text-white rounded-md font-semibold">
+                        <button className="bg-themecolor1 mx-20 py-3 my-3 mb-7 px-14 text-white rounded-md font-semibold">
                           List your show
                         </button>
                       </Link>
@@ -359,8 +359,8 @@ export default function ListYourShow() {
             other services like SEO for your event, custom pricing for your
             tickets and this and also this.
           </p>
-          <Link to="/doitsignup" target="_blank" className="block m-auto">
-            <button className="block m-auto my-10 bg-[#EC5E71] px-20 py-3 rounded-lg text-white font-semibold">
+          <Link to="/BME/doitsignup" target="_blank" className="block m-auto">
+            <button className="block m-auto my-10 bg-themecolor1 px-20 py-3 rounded-lg text-white font-semibold">
               List Your Show
             </button>
           </Link>

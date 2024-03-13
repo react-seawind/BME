@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         themecolor1: "#DC3558",
+        themecolor2: "#1a1963",
       },
       screens: {
         surface: { min: "1200px", max: "1399px" },

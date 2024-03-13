@@ -40,16 +40,16 @@ export default function Example({ color }) {
   const [login, setlogin] = useState(false);
 
   const navigation1 = [
-    { name: "Events", href: "/event", current: true },
+    { name: "Events", href: "/BME/event", current: true },
     { name: "Plays", href: "#", current: false },
     { name: "Sports", href: "#", current: false },
     { name: "Activites", href: "#", current: false },
   ];
 
   const navigation2 = [
-    { name: "ListYourShow", href: "/listyourshow", current: true },
-    { name: "Offers", href: "/offers", current: false },
-    { name: "Gift Cards", href: "/giftcard", current: false },
+    { name: "ListYourShow", href: "/BME/listyourshow", current: true },
+    { name: "Offers", href: "/BME/offers", current: false },
+    { name: "Gift Cards", href: "/BME/giftcard", current: false },
   ];
 
   function classNames(...classes) {
@@ -139,12 +139,17 @@ export default function Example({ color }) {
   };
 
   const bottomNavdata = [
-    { id: "1", link: "/", label: "Home", icons: <IoMdHome /> },
-    { id: "2", link: "/event", label: "Event", icons: <MdEventAvailable /> },
-    { id: "3", link: "/offers", label: "Offers", icons: <BiSolidOffer /> },
+    { id: "1", link: "/BME", label: "Home", icons: <IoMdHome /> },
+    {
+      id: "2",
+      link: "/BME/event",
+      label: "Event",
+      icons: <MdEventAvailable />,
+    },
+    { id: "3", link: "/BME/offers", label: "Offers", icons: <BiSolidOffer /> },
     {
       id: "4",
-      link: "/editprofile",
+      link: "/BME/editprofile",
       label: "Profile",
       icons: <MdAccountCircle />,
     },
@@ -187,7 +192,6 @@ export default function Example({ color }) {
       text: "Rewards",
       des: "View your rewards & unlock new ones",
     },
-    { logo1: <FaRegAddressBook />, logo2: <FaAngleRight />, text: "BookSmile" },
   ];
   const [nav, setNav] = useState(false);
 
@@ -212,7 +216,7 @@ export default function Example({ color }) {
                     {/* ================================Logo Part ===========================================*/}
                     <div className="flex  items-center justify-center sm:items-stretch sm:justify-start">
                       <div className="flex flex-shrink-0 items-center">
-                        <Link to="/">
+                        <Link to="/BME">
                           <img
                             className="h-16 w-auto absolute -mt-8"
                             src={MainLogo}
@@ -222,7 +226,7 @@ export default function Example({ color }) {
                       </div>
                     </div>
                     {/*==================================== Search bar ===================================  */}
-                    <div className="max-w-md md:max-w-72 border border-gray-400 mt-32 ml-[36px] md:ml-10px md:mt-0 lg:mr-40 md:mr-24 mr-0 w-full rounded-md">
+                    <div className="md:max-w-72 lg:max-w-82 xl:max-w-96 border border-gray-400 mt-32 ml-[36px] md:ml-10px md:mt-0 lg:mr-40 md:mr-24 mr-0 w-full rounded-md">
                       <div className="searchBar relative flex items-center h-8 rounded-lg focus-within:shadow-lg bg-white overflow-hidden md:w-full">
                         <div className="grid place-items-center h-12 w-12 text-gray-300">
                           <FaSearch />
@@ -647,7 +651,7 @@ export default function Example({ color }) {
                               Hey!
                               <MdAccountCircle className="mt-2 text-gray-600" />
                             </h2>
-                            <Link to="/editprofile">
+                            <Link to="/BME/editprofile">
                               <p className="flex text-sm">
                                 Edit Profile
                                 <FaAngleRight className="mt-1" />

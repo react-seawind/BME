@@ -97,8 +97,8 @@ function EventBook() {
             </div>
           </div>
           <div className="flex justify-end py-2 px-4 md:py-3 md:px-3 -mt-9 md:-mt-0">
-            <Link to="/bookingsteps">
-              <button className=" bg-[#EC5E71] px-8 md:py-4 py-1 md:px-14 md:font-semibold rounded-md md:rounded-lg text-lg md:text-xl text-white ">
+            <Link to="/BME/bookingsteps">
+              <button className=" bg-themecolor1 px-8 md:py-4 py-1 md:px-14 md:font-semibold rounded-md md:rounded-lg text-lg md:text-xl text-white ">
                 Book
               </button>
             </Link>
@@ -195,7 +195,7 @@ function EventBook() {
 
               <button
                 onClick={toggleAbout}
-                className="text-[#EC5E71] text-xs px-5 py-3"
+                className="text-themecolor1 text-xs px-5 py-3"
               >
                 {about ? "Read Less" : "Read More"}
               </button>

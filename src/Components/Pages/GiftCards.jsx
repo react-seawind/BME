@@ -12,10 +12,10 @@ function GiftCards() {
   const [openTab1, setOpenTab1] = React.useState(1);
 
   const alldata = [
-    { link: "/giftcardinnerpage", img: GiftCardImg },
-    { img: GiftCardImg },
-    { img: GiftCardImg },
-    { img: GiftCardImg },
+    { link: "/BME/giftcardinnerpage", img: GiftCardImg },
+    { link: "/BME/giftcardinnerpage",img: GiftCardImg },
+    { link: "/BME/giftcardinnerpage",img: GiftCardImg },
+    { link: "/BME/giftcardinnerpage",img: GiftCardImg },
   ];
 
   const grnricdata = [

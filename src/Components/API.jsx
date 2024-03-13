@@ -180,61 +180,61 @@ const popularEventsdata = [
     img: Events1,
     tittle: "Kirtidhan gadhvi - Ahmedabad",
     des: "Snapper Film City: Ahmedabad Concerts",
-    link: "/eventbook  ",
+    link: "/BME/eventbook  ",
   },
   {
     img: Events3,
     tittle: "Sonu Nigmam Live In Conceret - Surat",
     des: "CB Patel Cricket Ground: Surat",
-    link: "",
+    link: "/BME/eventbook",
   },
   {
     img: Events2,
     tittle: "Kirtidhan gadhvi - Ahmedabad",
     des: "Gift City: Ahmedabad Concerts",
-    link: "",
+    link: "/BME/eventbook",
   },
   {
     img: Events4,
     tittle: "Sachet-Parampara live in concert - Ahmedabad",
     des: "Venu To Be Announced: Ahmedabad Concerts",
-    link: "",
+    link: "/BME/eventbook",
   },
   {
     img: Events5,
     tittle: "Jigardan gadhvi - Ahmedabad",
     des: "Rajpath club: Ahmedabad Concerts",
-    link: "",
+    link: "/BME/eventbook",
   },
   {
     img: Events2,
     tittle: "Kirtidhan gadhvi - Ahmedabad",
     des: "Gift City: Ahmedabad Concerts",
-    link: "",
+    link: "/BME/eventbook",
   },
   {
     img: Events1,
     tittle: "Kirtidhan gadhvi - Ahmedabad",
     des: "Snapper Film City: Ahmedabad Concerts",
-    link: "",
+    link: "/BME/eventbook",
   },
   {
     img: Events4,
     tittle: "Sachet-Parampara live in concert - Ahmedabad",
     des: "Venu To Be Announced: Ahmedabad Concerts",
-    link: "",
+    link: "/BME/eventbook",
   },
   {
     img: Events5,
     tittle: "Jigardan gadhvi - Ahmedabad",
     des: "Rajpath club: Ahmedabad Concerts",
-    link: "",
+    link: "/BME/eventbook",
   },
   {
     img: Events3,
     tittle: "Sonu Nigmam Live In Conceret - Surat",
     des: "CB Patel Cricket Ground: Surat",
-    link: "",
+    link: "/BME/eventbook",
   },
 ];
 
@@ -244,56 +244,56 @@ const featuredeventdata = [
     tittle1: "Video on Demand",
     tittle2: "Watch on Insider",
     price: "700",
-    link: "",
+    link: "/BME/event",
   },
   {
     img: FeaturedImg3,
     tittle1: "Video on Demand",
     tittle2: "Watch on Insider",
     price: "1000",
-    link: "",
+    link: "/BME/event",
   },
   {
     img: FeaturedImg2,
     tittle1: "Video on Demand",
     tittle2: "Watch on Insider",
     price: "300",
-    link: "",
+    link: "/BME/event",
   },
   {
     img: FeaturedImg5,
     tittle1: "Video on Demand",
     tittle2: "Watch on Insider",
     price: "1500",
-    link: "",
+    link: "/BME/event",
   },
   {
     img: FeaturedImg4,
     tittle1: "Video on Demand",
     tittle2: "Watch on Insider",
     price: "1000",
-    link: "",
+    link: "/BME/event",
   },
   {
     img: FeaturedImg6,
     tittle1: "Video on Demand",
     tittle2: "Watch on Insider",
     price: "1000",
-    link: "",
+    link: "/BME/event",
   },
   {
     img: FeaturedImg7,
     tittle1: "Video on Demand",
     tittle2: "Watch on Insider",
     price: "700",
-    link: "",
+    link: "/BME/event",
   },
   {
     img: FeaturedImg8,
     tittle1: "Video on Demand",
     tittle2: "Watch on Insider",
     price: "300",
-    link: "",
+    link: "/BME/event",
   },
 ];
 
@@ -353,70 +353,70 @@ const outDoorEventsdata = [
 ];
 const musicdata = [
   {
-    link: "",
+    link: "/BME/event",
     img: MusicImg,
     date: "Sun, 11 Feb",
     tittle: "SANAM BAND Live Concert - Ahmedabad",
     des: "Club Babylon: Ahmedabad Concerts",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: MusicImg6,
     date: "",
     tittle: "Sachet-Parampara live in concert",
     des: "Venu To Be Announced: Ahmedabad",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: MusicImg2,
     date: "",
     tittle: "Vasudhavia Kutumbakam",
     des: "Natrani Amphitheater: Ahmedabad Concerts",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: MusicImg3,
     date: "",
     tittle: "Peace Through Music Salaam-E-Ishq",
     des: "Tagore Memmorial Hall: Ahmedabad Concerts",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: MusicImg4,
     date: "",
     tittle: "Ed Sheeran: +-=/* Tour",
     des: "Club Babylon: Ahmedabad Concerts",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: MusicImg5,
     date: "",
     tittle: "HOri Ke Rasiya",
     des: "Pandit Dindayal Upadhyay Auditorium: Ahmedabad Concerts",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: MusicImg4,
     date: "",
     tittle: "Ed Sheeran: +-=/* Tour",
     des: "Club Babylon: Ahmedabad Concerts",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: MusicImg,
     date: "",
     tittle: "SANAM BAND Live Concert - Ahmedabad",
     des: "Club Babylon: Ahmedabad Concerts",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: MusicImg2,
     date: "",
     tittle: "Vasudhavia Kutumbakam",
     des: "Natrani Amphitheater: Ahmedabad Concerts",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: MusicImg3,
     date: "",
     tittle: "Peace Through Music Salaam-E-Ishq",
@@ -426,70 +426,70 @@ const musicdata = [
 
 const comedydata = [
   {
-    link: "",
+    link: "/BME/event",
     img: ComdeyImg1,
     date: "Sun, 11 Feb",
     tittle: "The Comedy Factory Live  - Ahmedabad",
     des: "Savanna Party Lawn: Ahmedabad",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: ComdeyImg6,
     date: "",
     tittle: "Sanjay Goradia Live",
     des: "HK Hall, Ellisbridge: Ahmedabad",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: ComdeyImg5,
     date: "",
     tittle: "GujjuBhai Comedy Live",
     des: "NHK Hall, Ellisbridge: Ahmedabad",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: ComdeyImg3,
     date: "",
     tittle: "Manan Desai and Chiryu Mistry Live - Ahmedabad",
     des: "Mehendi Navaz Jung Hall: Ahmedabad",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: ComdeyImg4,
     date: "",
     tittle: "Chiryu Mistry Live - Ahmedabad",
     des: "Cheese Box Studios: Ahmedabad",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: ComdeyImg2,
     date: "",
     tittle: "Manan Desai Live - Ahmedabad",
     des: "Cheese Box Studios: Ahmedabad",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: ComdeyImg6,
     date: "",
     tittle: "Sanjay Goradia Live",
     des: "HK Hall, Ellisbridge: Ahmedabad",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: ComdeyImg4,
     date: "",
     tittle: "Chiryu Mistry Live - Ahmedabad",
     des: "Cheese Box Studios: Ahmedabad",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: ComdeyImg3,
     date: "",
     tittle: "Manan Desai and Chiryu Mistry Live - Ahmedabad",
     des: "Mehendi Navaz Jung Hall: Ahmedabad",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: ComdeyImg1,
     date: "Sun, 11 Feb",
     tittle: "The Comedy Factory Live  - Ahmedabad",
@@ -515,7 +515,7 @@ const artistdata = [
 const broseeventdata = [
   {
     logo: <RiComputerLine />,
-    link: "",
+    link: "/BME/event",
     tittle: "Workshops",
     link2: "",
     des: "154 events",
@@ -523,7 +523,7 @@ const broseeventdata = [
   },
   {
     logo: <RiGraduationCapLine />,
-    link: "",
+    link: "/BME/event",
     tittle: "Courses",
     link2: "",
     des: "73 events",
@@ -531,7 +531,7 @@ const broseeventdata = [
   },
   {
     logo: <GiTheaterCurtains />,
-    link: "",
+    link: "/BME/event",
     tittle: "Theatre & Arts",
     link2: "",
     des: "35 events",
@@ -539,7 +539,7 @@ const broseeventdata = [
   },
   {
     logo: <LuHeartPulse />,
-    link: "",
+    link: "/BME/event",
     tittle: "Helath & Wellness",
     link2: "",
     des: "34 events",
@@ -547,7 +547,7 @@ const broseeventdata = [
   },
   {
     logo: <TbMoodKid />,
-    link: "",
+    link: "/BME/event",
     tittle: "Kids",
     link2: "",
     des: "16 events",
@@ -555,7 +555,7 @@ const broseeventdata = [
   },
   {
     logo: <HiOutlineMusicNote />,
-    link: "",
+    link: "/BME/event",
     tittle: "Music",
     link2: "",
     des: "15 events",
@@ -563,7 +563,7 @@ const broseeventdata = [
   },
   {
     logo: <CgGames />,
-    link: "",
+    link: "/BME/event",
     tittle: "Games & Quizzes",
     link2: "",
     des: "12 events",
@@ -571,7 +571,7 @@ const broseeventdata = [
   },
   {
     logo: <BsPeople />,
-    link: "",
+    link: "/BME/event",
     tittle: "Talks",
     link2: "",
     des: "10 events",
@@ -591,15 +591,45 @@ const eventdata1 = [
     img: Events1,
     tittle: "Kirtidan Gadhvi",
     des: "Gujarati",
-    link: "/eventbook",
+    link: "/BME/eventbook",
   },
-  { img: Events2, tittle: "Kirtidan Gadhvi", des: "Gujarati" },
-  { img: Events3, tittle: "Sonu Nigam", des: "Hindi" },
-  { img: Events4, tittle: "Sachet-Parampara", des: "Hindi" },
-  { img: Events5, tittle: "Aditya Gadhvi", des: "Gujarati" },
-  { img: Events6, tittle: "Gaman Santhal", des: "Gujarati" },
-  { img: Events7, tittle: "Kirtidan Gadhvi", des: "Gujarati" },
-  { img: Events8, tittle: "Geeta Rabari", des: "Gujarati" },
+  {
+    img: Events2,
+    tittle: "Kirtidan Gadhvi",
+    des: "Gujarati",
+    link: "/BME/eventbook",
+  },
+  { img: Events3, tittle: "Sonu Nigam", des: "Hindi", link: "/BME/eventbook" },
+  {
+    img: Events4,
+    tittle: "Sachet-Parampara",
+    des: "Hindi",
+    link: "/BME/eventbook",
+  },
+  {
+    img: Events5,
+    tittle: "Aditya Gadhvi",
+    des: "Gujarati",
+    link: "/BME/eventbook",
+  },
+  {
+    img: Events6,
+    tittle: "Gaman Santhal",
+    des: "Gujarati",
+    link: "/BME/eventbook",
+  },
+  {
+    img: Events7,
+    tittle: "Kirtidan Gadhvi",
+    des: "Gujarati",
+    link: "/BME/eventbook",
+  },
+  {
+    img: Events8,
+    tittle: "Geeta Rabari",
+    des: "Gujarati",
+    link: "/BME/eventbook",
+  },
 ];
 
 const hostdata = [
@@ -674,7 +704,7 @@ const hostdata = [
 const servicesofferdata = [
   {
     id: 1,
-    link: "",
+    link: "/BME/event",
     img: ServicesOfferImg1,
     tittle: "Onlline Sales & Marketing",
     logo: <IoIosInformationCircleOutline />,
@@ -693,7 +723,7 @@ const servicesofferdata = [
     text5: "Sell more tickets on ground",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: ServicesOfferImg2,
     tittle: "Pricing",
     logo: <IoIosInformationCircleOutline />,
@@ -713,7 +743,7 @@ const servicesofferdata = [
     text5: "Fast tacked payment reconciliation",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: ServicesOfferImg3,
     tittle: "Food & beverages, stalls and the works!",
     logo: <IoIosInformationCircleOutline />,
@@ -732,7 +762,7 @@ const servicesofferdata = [
     text5: "Ticket specific offerings",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: ServicesOfferImg4,
     tittle: "On ground support & gate entry management",
     logo: <IoIosInformationCircleOutline />,
@@ -751,7 +781,7 @@ const servicesofferdata = [
     text5: "And so on...",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: ServicesOfferImg5,
     tittle: "Report & business insights",
     logo: <IoIosInformationCircleOutline />,
@@ -766,7 +796,7 @@ const servicesofferdata = [
     text3: "Behavioural insights",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: ServicesOfferImg6,
     tittle: "POS, RFID, Turnstiles & more...",
     logo: <IoIosInformationCircleOutline />,
@@ -786,7 +816,7 @@ const servicesofferdata = [
 
 const creditcarddata = [
   {
-    link: "/offerinnerpage",
+    link: "/BME/offerinnerpage",
     img: CreditcardImg1,
     bankimg: BankImg1,
     tittle: "SBI SIGNATURE/ELITE CREDITCARD",
@@ -796,7 +826,7 @@ const creditcarddata = [
       "Get 2 free movie tickets or INR 500 off whichever is less with SBI Signature/Elite credit cards",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: CreditcardImg1,
     bankimg: BankImg1,
     tittle: "SBI SIGNATURE/ELITE CREDITCARD",
@@ -806,7 +836,7 @@ const creditcarddata = [
       "Get 2 free movie tickets or INR 500 off whichever is less with SBI Signature/Elite credit cards",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: CreditcardImg1,
     bankimg: BankImg1,
     tittle: "SBI SIGNATURE/ELITE CREDITCARD",
@@ -816,7 +846,7 @@ const creditcarddata = [
       "Get 2 free movie tickets or INR 500 off whichever is less with SBI Signature/Elite credit cards",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: CreditcardImg1,
     bankimg: BankImg1,
     tittle: "SBI SIGNATURE/ELITE CREDITCARD",
@@ -826,7 +856,7 @@ const creditcarddata = [
       "Get 2 free movie tickets or INR 500 off whichever is less with SBI Signature/Elite credit cards",
   },
   {
-    link: "",
+    link: "/BME/event",
     img: CreditcardImg1,
     bankimg: BankImg1,
     tittle: "SBI SIGNATURE/ELITE CREDITCARD",
@@ -839,7 +869,7 @@ const creditcarddata = [
 
 const debitcarddata = [
   {
-    link: "",
+    link: "/BME/event",
     img: DebitCardImg1,
     bankimg: Visa,
     tittle: "VISA INFINITE CARD OFFER",
@@ -852,7 +882,7 @@ const debitcarddata = [
 
 const bookmyeventdata = [
   {
-    link: "",
+    link: "/BME/event",
     img: BookMyeventImg1,
     bankimg: Logo,
     tittle: "B1G1 TICKET FREE - USE C...",
@@ -864,7 +894,7 @@ const bookmyeventdata = [
 
 const walletdata = [
   {
-    link: "",
+    link: "/BME/event",
     img: Wallet,
     bankimg: WalletLogo,
     tittle: "AMAZON PAY CASHBACK ...",
@@ -876,7 +906,7 @@ const walletdata = [
 
 const rewardsdata = [
   {
-    link: "",
+    link: "/BME/event",
     img: CreditcardImg1,
     bankimg: BankImg1,
     tittle: "SBI SIGNATURE/ELITE CREDITCARD",
@@ -889,7 +919,7 @@ const rewardsdata = [
 
 const paylaterdata = [
   {
-    link: "",
+    link: "/BME/event",
     img: Paylatter,
     bankimg: PaylaterLogo,
     tittle: "SIMPLE CASHBACK OFFER",
@@ -898,6 +928,18 @@ const paylaterdata = [
     hoverdes: "Get assured 15% cashback upto INR with simple",
   },
 ];
+
+const youlisting = [
+  { img: Events1, title: "Kirtidan Gadhvi" },
+  { img: Events2, title: "Kirtidan Gadhvi" },
+  { img: Events3, title: "Kirtidan Gadhvi" },
+  { img: Events4, title: "Kirtidan Gadhvi" },
+  { img: Events5, title: "Kirtidan Gadhvi" },
+  { img: Events6, title: "Gaman Santhal" },
+  { img: Events7, title: "Kirtidan Gadhvi" },
+  { img: Events8, title: "Geeta Rabari" },
+];
+
 export {
   HomeSLiderData,
   broseeventdata,
@@ -919,4 +961,5 @@ export {
   comedydata,
   artistdata,
   buttondata,
+  youlisting,
 };

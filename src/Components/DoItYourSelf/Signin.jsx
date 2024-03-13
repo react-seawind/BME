@@ -87,7 +87,7 @@ export default function Signin() {
 
             <div className="grid grid-cols-1 gap-2 ">
               <Link
-                to={"/doitotp"}
+                to={"/BME/doitotp"}
                 className="py-2 bg-[#3E6EEA]  text-white text-center font-bold rounded-md mt-6 "
               >
                 Procced
@@ -96,13 +96,16 @@ export default function Signin() {
 
             <div className="text-center mt-10">
               <p>
-                <Link to={"/doitsignin"} className="text-[#3E6EEA] font-bold">
+                <Link
+                  to={"/BME/doitsignin"}
+                  className="text-[#3E6EEA] font-bold"
+                >
                   Login with OTP
                 </Link>
               </p>
               <p>
                 <Link
-                  to={"/doitsignin/forgotpass"}
+                  to={"/BME/doitsignin/forgotpass"}
                   className="text-[#3E6EEA] font-bold"
                 >
                   Forgot Password
