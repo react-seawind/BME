@@ -299,53 +299,63 @@ const featuredeventdata = [
 
 const outDoorEventsdata = [
   {
+    link: "/BME/event",
     img: OutdoorImg1,
 
     tittle: "Zakir Khan Live - Ahmedabad",
     des: "Savanna Party Lawn: Ahmedabad Concerts ",
   },
   {
+    link: "/BME/event",
     img: OutdoorImg7,
 
     tittle: "Falguni Pathak Live - Ahmedabad",
     des: "Gift City: Ghandhinagar Concerts ",
   },
   {
+    link: "/BME/event",
     img: OutdoorImg3,
     tittle: "Sonu Nigmam Live - Ahmedabad",
     des: "CB Patel Cricket Ground: Surat  ",
   },
   {
+    link: "/BME/event",
     img: OutdoorImg6,
     tittle: "Kirtidhan Gadhvi- Ahmedabad",
     des: "Lawis Green Party Plot: Ahmedabad Concerts ",
   },
   {
+    link: "/BME/event",
     img: OutdoorImg5,
     tittle: "Akshar River Cruise",
     des: "Sabarmati Riverfront: Ahmedabad Concerts ",
   },
   {
+    link: "/BME/event",
     img: OutdoorImg4,
     tittle: "Kirtidhan Gadhvi Live - Ahmedabad",
     des: "Shanku Farm: Ahmedabad Concerts ",
   },
   {
+    link: "/BME/event",
     img: OutdoorImg2,
     tittle: "Aditya Gadhvi Live- Ahmedabad",
     des: "Rajpath Club: Ahmedabad Concerts ",
   },
   {
+    link: "/BME/event",
     img: OutdoorImg8,
     tittle: "Kinjal Dave Live- Ahmedabad",
     des: "Sindhu Bhavan: Ahmedabad Concerts ",
   },
   {
+    link: "/BME/event",
     img: OutdoorImg9,
     tittle: "Shruti pathak Live- Ahmedabad",
     des: "Rajpath Club: Ahmedabad Concerts ",
   },
   {
+    link: "/BME/event",
     img: OutdoorImg10,
     tittle: "Kairavi Buch Live- Ahmedabad",
     des: "Lawis Green Partry Plot: Ahmedabad Concerts ",
@@ -498,18 +508,78 @@ const comedydata = [
 ];
 
 const artistdata = [
-  { img: Artist1, tittle: "kirtidan Gadhvi", des: "6 Events" },
-  { img: Artist2, tittle: "Rutvi Pandya", des: "6 Events" },
-  { img: Artist3, tittle: "Osman Mir", des: "6 Events" },
-  { img: Artist4, tittle: "Geeta Rabari", des: "6 Events" },
-  { img: Artist5, tittle: "Jigardan Gadhavi", des: "6 Events" },
-  { img: Artist6, tittle: "Aditya Gadhvi", des: "6 Events" },
-  { img: Artist1, tittle: "kirtidan Gadhvi", des: "6 Events" },
-  { img: Artist2, tittle: "Rutvi Pandya", des: "6 Events" },
-  { img: Artist3, tittle: "Osman Mir", des: "6 Events" },
-  { img: Artist4, tittle: "Geeta Rabari", des: "6 Events" },
-  { img: Artist5, tittle: "Jigardan Gadhavi", des: "6 Events" },
-  { img: Artist6, tittle: "Aditya Gadhvi", des: "6 Events" },
+  {
+    img: Artist1,
+    link: "/BME/artistdetail",
+    tittle: "kirtidan Gadhvi",
+    des: "6 Events",
+  },
+  {
+    img: Artist2,
+    link: "/BME/artistdetail",
+    tittle: "Rutvi Pandya",
+    des: "6 Events",
+  },
+  {
+    img: Artist3,
+    link: "/BME/artistdetail",
+    tittle: "Osman Mir",
+    des: "6 Events",
+  },
+  {
+    img: Artist4,
+    link: "/BME/artistdetail",
+    tittle: "Geeta Rabari",
+    des: "6 Events",
+  },
+  {
+    img: Artist5,
+    link: "/BME/artistdetail",
+    tittle: "Jigardan Gadhavi",
+    des: "6 Events",
+  },
+  {
+    img: Artist6,
+    link: "/BME/artistdetail",
+    tittle: "Aditya Gadhvi",
+    des: "6 Events",
+  },
+  {
+    img: Artist1,
+    link: "/BME/artistdetail",
+    tittle: "kirtidan Gadhvi",
+    des: "6 Events",
+  },
+  {
+    img: Artist2,
+    link: "/BME/artistdetail",
+    tittle: "Rutvi Pandya",
+    des: "6 Events",
+  },
+  {
+    img: Artist3,
+    link: "/BME/artistdetail",
+    tittle: "Osman Mir",
+    des: "6 Events",
+  },
+  {
+    img: Artist4,
+    link: "/BME/artistdetail",
+    tittle: "Geeta Rabari",
+    des: "6 Events",
+  },
+  {
+    img: Artist5,
+    link: "/BME/artistdetail",
+    tittle: "Jigardan Gadhavi",
+    des: "6 Events",
+  },
+  {
+    img: Artist6,
+    link: "/BME/artistdetail",
+    tittle: "Aditya Gadhvi",
+    des: "6 Events",
+  },
 ];
 
 const broseeventdata = [

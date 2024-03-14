@@ -420,7 +420,7 @@ function Home() {
                 <div className="">
                   <div key={index}>
                     <div className="max-w-sm overflow-hidden mx-4 border border-themecolor1 rounded-md">
-                      <Link>
+                      <Link to={val.link}>
                         <img
                           className="xl:h-96 lg:h-80 surface:h-80 rounded-md h-72 md:h-60 w-full"
                           src={val.img}
@@ -475,7 +475,10 @@ function Home() {
               NEW
             </span>
           </h1>
-          <Link className="md:text-base text-sm text-themecolor1 flex justify-end mr-5 -mt-5 mb-2 font-semibold">
+          <Link
+            className="md:text-base text-sm text-themecolor1 flex justify-end mr-5 -mt-5 mb-2 font-semibold"
+            to={"/BME/event"}
+          >
             See All
             <IoIosArrowForward className="mt-1" />
           </Link>
@@ -484,7 +487,7 @@ function Home() {
               return (
                 <div>
                   <div key={index}>
-                    <Link>
+                    <Link to={val.link}>
                       <div className="max-w-sm overflow-hidden mx-4 border border-themecolor1 rounded-md">
                         <div className="rounded-xl">
                           <img
@@ -515,7 +518,7 @@ function Home() {
       <section className="browseevents lg:mt-20 mt-5">
         <div className="container mx-auto">
           <h1 className="md:mt-10 mt-4 -my-1 ml-4 md:text-2xl text-xl font-semibold text-black">
-            Browse Events By Genre
+            Browse Events
           </h1>
           <div className="grid grid-cols-3 lg:grid-cols-8 md:grid-cols-4">
             {broseeventdata.map((val, index) => {
@@ -537,9 +540,11 @@ function Home() {
               );
             })}
           </div>
-          <button className="bg-red-600  py-2 px-4 flex justify-center mt-5 text-lg text-white mx-auto rounded-3xl ">
-            Show More
-          </button>
+          <Link to={"/BME/event"}>
+            <button className="bg-red-600  py-2 px-4 flex justify-center mt-5 text-lg text-white mx-auto rounded-3xl ">
+              Show More
+            </button>
+          </Link>
         </div>
       </section>
 
@@ -557,7 +562,7 @@ function Home() {
             {musicdata.map((val, index) => {
               return (
                 <div key={index}>
-                  <Link href={val.link}>
+                  <Link to={val.link}>
                     <div className="max-w-sm overflow-hidden m-3">
                       <img
                         className="xl:h-96 lg:h-80 surface:h-80 rounded-md h-72 md:h-60 w-full"
@@ -674,14 +679,21 @@ function Home() {
           <h1 className="md:mt-10 mt-4 my-2 ml-4 md:text-2xl text-xl font-semibold text-black">
             Artist
           </h1>
-          <Link className="md:text-base text-sm text-themecolor1 flex justify-end mr-5 -mt-5 mb-2 font-semibold">
+          <Link
+            to={"/BME/artist"}
+            className="md:text-base text-sm text-themecolor1 flex justify-end mr-5 -mt-5 mb-2 font-semibold"
+          >
             See All
             <IoIosArrowForward className="mt-1" />
           </Link>
           <Slider {...artist}>
             {artistdata.map((val, index) => {
               return (
-                <Link className="contain relative md:mx-2" key={index}>
+                <Link
+                  className="contain relative md:mx-2"
+                  key={index}
+                  to={val.link}
+                >
                   <img
                     src={val.img}
                     alt="Avatar"

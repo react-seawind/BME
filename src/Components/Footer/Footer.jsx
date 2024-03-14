@@ -60,7 +60,7 @@ function Footer() {
               & get listed on BookMyEvent{" "}
             </p>
           </div>
-          <div className="lg:ml-auto lg:mx-0 sm:flex justify-center">
+          <div className="lg:ml-auto lg:mx-0 flex justify-center lg:block">
             <button className="bg-themecolor1 text-white my-5   py-2 px-3   rounded-lg">
               Contact today
             </button>

@@ -5,44 +5,11 @@ import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
 
 function OfferInnerPage() {
-  const [termsCond, setTermsCond] = useState(false);
-  const toggletermsCond = () => {
-    setTermsCond(!termsCond);
-  };
-
   const [maxnum, setMaxnum] = useState(false);
   const togglemaxnum = () => {
     setMaxnum(!maxnum);
   };
-  const offerdata = [
-    {
-      des: "1. Get 2 free movie tickets per month or INR 500 off whichever is less with SBI Signature/Elite credit card",
-    },
-    {
-      des: "2. Get 2 free movie tickets per month or INR 500 off whichever is less with SBI Signature/Elite credit card",
-    },
-    {
-      des: "3. Get 2 free movie tickets per month or INR 500 off whichever is less with SBI Signature/Elite credit card",
-    },
-    {
-      des: "4. Get 2 free movie tickets per month or INR 500 off whichever is less with SBI Signature/Elite credit card",
-    },
-  ];
 
-  const allofferdata = [
-    {
-      des: "1. Go through the regular ticketing flow for selecting the movie, cinema, and show of your choice",
-    },
-    {
-      des: "2. Go through the regular ticketing flow for selecting the movie, cinema, and show of your choice",
-    },
-    {
-      des: "3. Go through the regular ticketing flow for selecting the movie, cinema, and show of your choice",
-    },
-    {
-      des: "4. Go through the regular ticketing flow for selecting the movie, cinema, and show of your choice",
-    },
-  ];
   return (
     <div>
       <img src={OfferInnerPageImg} alt="" className="w-full" />

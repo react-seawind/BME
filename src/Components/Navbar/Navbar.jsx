@@ -27,7 +27,13 @@ import { CiCreditCard2 } from "react-icons/ci";
 import { BiMessageRoundedDots } from "react-icons/bi";
 import { IoSettingsOutline } from "react-icons/io5";
 import { GoGift } from "react-icons/go";
-import { FaBars, FaRegAddressBook, FaSearch } from "react-icons/fa";
+import {
+  FaArrowDown,
+  FaBars,
+  FaChevronDown,
+  FaRegAddressBook,
+  FaSearch,
+} from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import Country from "../../Images/indianflag.png";
@@ -359,11 +365,11 @@ export default function Example({ color }) {
 
                     {/* ====================================city dropdown==========================================*/}
                     <button
-                      className="cityDropDown text-black  font-bold text-sm px-6 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 absolute ml-20 lg:ml-[56rem] md:ml-[30rem]"
+                      className="cityDropDown flex items-center text-black  font-bold text-sm px-6 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 absolute ml-20 lg:ml-[56rem] md:ml-[30rem]"
                       type="button"
                       onClick={() => setShowModal2(true)}
                     >
-                      Ahmedabad
+                      Ahmedabad <FaChevronDown className="ml-2" />
                     </button>
                     {showModal2 ? (
                       <div>
@@ -651,7 +657,10 @@ export default function Example({ color }) {
                               Hey!
                               <MdAccountCircle className="mt-2 text-gray-600" />
                             </h2>
-                            <Link to="/BME/editprofile">
+                            <Link
+                              to="/BME/editprofile"
+                              onClick={() => setNav(false)}
+                            >
                               <p className="flex text-sm">
                                 Edit Profile
                                 <FaAngleRight className="mt-1" />
@@ -680,7 +689,10 @@ export default function Example({ color }) {
                                 ({ logo1, logo2, text, des }, index) => {
                                   return (
                                     <div key={index} className="py-2 border-b">
-                                      <h1 className="text-base flex cursor-pointer w-full mx-auto">
+                                      <h1
+                                        className="text-base flex cursor-pointer w-full mx-auto"
+                                        onClick={() => setNav(false)}
+                                      >
                                         <span className="mt-1 text-xl px-2">
                                           {logo1}
                                         </span>{" "}

@@ -20,6 +20,8 @@ import FAQ from "../Components/Pages/FAQ";
 import Kyc1 from "../Components/Pages/Kyc1";
 import Kyc2 from "../Components/Pages/Kyc2";
 import Kyc3 from "../Components/Pages/Kyc3";
+import Artistdetail from "../Components/Pages/Artistdetail";
+import Artist from "../Components/Pages/Artist";
 
 function Router() {
   return (
@@ -47,6 +49,9 @@ function Router() {
       <Route path="/BME/kyc-1" element={<Kyc1 />} />
       <Route path="/BME/kyc-2" element={<Kyc2 />} />
       <Route path="/BME/kyc-3" element={<Kyc3 />} />
+
+      <Route path="/BME/artistdetail" element={<Artistdetail />} />
+      <Route path="/BME/artist" element={<Artist />} />
     </Routes>
   );
 }

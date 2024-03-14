@@ -7,6 +7,7 @@ const Kyc1 = () => {
     const getshow1 = e.target.value;
     setShowhide1(getshow1);
   };
+
   return (
     <div className="">
       <div className="container lg:w-2/3 px-4 mx-auto my-10">
@@ -17,9 +18,9 @@ const Kyc1 = () => {
         <h1 className="bg-[#FFF3CD] border border-[#FFECB5] px-5 py-4 rounded-lg text-[#664D03] font-medium my-4 mx-4 lg:mx-0">
           Your KYC status is Pending
         </h1>
-        <form action="lg:mx-44 mx-4">
+        <form>
           <div className="border">
-            <h1 className="text-lg  p-2 text-white font-bold bg-themecolor1">
+            <h1 className="text-lg  p-2 text-white font-bold bg-themecolor1 ">
               General Informmation
             </h1>
             <div className=" bg-white p-4">
@@ -29,59 +30,55 @@ const Kyc1 = () => {
               {/* ===================Yes and No ====================*/}
               <div className="col-md-12 mt-5">
                 <div className="text-black">
-                  <form action="">
-                    <input
-                      type="radio"
-                      name="userdetail"
-                      value="yes"
-                      checked={showhide1 === "yes"}
-                      onClick={handleshow1}
-                      className="text-gray-600"
-                    />
-                    <label htmlFor="" className="px-2">
-                      Yes
-                    </label>
-                    <input
-                      type="radio"
-                      name="userdetail"
-                      value="no"
-                      onClick={handleshow1}
-                      className=""
-                    />
-                    <label htmlFor="" className="px-2">
-                      No
-                    </label>
-                  </form>
+                  <input
+                    type="radio"
+                    name="userdetail"
+                    value="yes"
+                    checked={showhide1 === "yes"}
+                    onClick={handleshow1}
+                    className="text-gray-600"
+                  />
+                  <label htmlFor="" className="px-2">
+                    Yes
+                  </label>
+                  <input
+                    type="radio"
+                    name="userdetail"
+                    value="no"
+                    onClick={handleshow1}
+                    className=""
+                  />
+                  <label htmlFor="" className="px-2">
+                    No
+                  </label>
                 </div>
                 {showhide1 === "yes" && (
-                  <form action="" className="my-5">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-10 gap-4">
-                      <div className="">
-                        <h1 htmlFor="" className="text-sm font-medium ">
-                          GSTIN <span className="text-red-600">*</span>
-                        </h1>
-                        <input
-                          type="text"
-                          name=""
-                          id=""
-                          className="outline-none p-2 mt-2 border w-full rounded-md"
-                          placeholder="GSTIN"
-                        />
-                      </div>
-                      <div className="">
-                        <h1 htmlFor="" className="text-sm font-medium ">
-                          PAN <span className="text-red-600">*</span>
-                        </h1>
-                        <input
-                          type="text"
-                          name=""
-                          id=""
-                          className="outline-none p-2 mt-2 border w-full rounded-md"
-                          placeholder="PAN"
-                        />
-                      </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-10 gap-4 my-5">
+                    <div className="">
+                      <h1 htmlFor="" className="text-sm font-medium ">
+                        GSTIN <span className="text-red-600">*</span>
+                      </h1>
+                      <input
+                        type="text"
+                        name=""
+                        id=""
+                        className="outline-none p-2 mt-2 border w-full rounded-md"
+                        placeholder="GSTIN"
+                      />
                     </div>
-                  </form>
+                    <div className="">
+                      <h1 htmlFor="" className="text-sm font-medium ">
+                        PAN <span className="text-red-600">*</span>
+                      </h1>
+                      <input
+                        type="text"
+                        name=""
+                        id=""
+                        className="outline-none p-2 mt-2 border w-full rounded-md"
+                        placeholder="PAN"
+                      />
+                    </div>
+                  </div>
                 )}
                 <h1 className="font-semibold mt-4">
                   Registered Company Name/Organiser's name
@@ -124,31 +121,6 @@ const Kyc1 = () => {
                   <option value="DL">Delhi</option>
                   <option value="GA">Goa</option>
                   <option value="GJ">Gujarat</option>
-                  <option value="HR">Haryana</option>
-                  <option value="HP">Himachal Pradesh</option>
-                  <option value="JK">Jammu and Kashmir</option>
-                  <option value="JH">Jharkhand</option>
-                  <option value="KA">Karnataka</option>
-                  <option value="KL">Kerala</option>
-                  <option value="LA">Ladakh</option>
-                  <option value="LD">Lakshadweep</option>
-                  <option value="MP">Madhya Pradesh</option>
-                  <option value="MH">Maharashtra</option>
-                  <option value="MN">Manipur</option>
-                  <option value="ML">Meghalaya</option>
-                  <option value="MZ">Mizoram</option>
-                  <option value="NL">Nagaland</option>
-                  <option value="OR">Odisha</option>
-                  <option value="PY">Puducherry</option>
-                  <option value="PB">Punjab</option>
-                  <option value="RJ">Rajasthan</option>
-                  <option value="SK">Sikkim</option>
-                  <option value="TN">Tamil Nadu</option>
-                  <option value="TG">Telangana</option>
-                  <option value="TR">Tripura</option>
-                  <option value="UP">Uttar Pradesh</option>
-                  <option value="UT">Uttarakhand</option>
-                  <option value="WB">West Bengal</option>
                 </select>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-10 md:gap-4">
                   <div className="">
