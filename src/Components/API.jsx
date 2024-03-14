@@ -150,11 +150,11 @@ import BankImg1 from "../Images/bank1.png";
 import DebitCardImg1 from "../Images/debitcard1.png";
 import Visa from "../Images/visa.png";
 import BookMyeventImg1 from "../Images/featured5.png";
-import Logo from "../Images/logo.png";
+import Logo from "../Images/newlogo.png";
 import Wallet from "../Images/wallet.png";
 import WalletLogo from "../Images/walletLogo.png";
 import Paylatter from "../Images/paylater.png";
-import PaylaterLogo from "../Images/paylaterlogo.png";
+import PaylaterLogo from "../Images/paylater.png";
 
 const HomeSLiderData = [{ image: Banner1 }, { image: Banner2 }];
 const NewExperiencedata = [
@@ -374,7 +374,7 @@ const musicdata = [
     img: MusicImg6,
     date: "",
     tittle: "Sachet-Parampara live in concert",
-    des: "Venu To Be Announced: Ahmedabad",
+    des: "Venue To Be Announced: Ahmedabad",
   },
   {
     link: "/BME/event",

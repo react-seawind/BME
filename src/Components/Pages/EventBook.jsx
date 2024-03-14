@@ -121,7 +121,10 @@ function EventBook() {
           <div className="w-full ">
             <div className="p-5 bg-white">
               <h1 className="border-b text-lg font-semibold">Artist</h1>
-              <div className="grid lg:grid-cols-2 md:grid-cols-2 mx-auto grid-cols-1  ">
+              <Link
+                to={"/BME/artistdetail"}
+                className="grid lg:grid-cols-2 md:grid-cols-2 mx-auto grid-cols-1  "
+              >
                 <img
                   src={Artist1}
                   alt=""
@@ -130,7 +133,7 @@ function EventBook() {
                 <h1 className="px-5   font-semibold flex justify-center items-center">
                   Kirtidan Gadhvi{" "}
                 </h1>
-              </div>
+              </Link>
             </div>
 
             <div className="p-3 bg-white mt-5">
