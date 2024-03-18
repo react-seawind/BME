@@ -4,7 +4,7 @@ import BankImg1 from "../../Images/bank1.png";
 import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
 
-function OfferInnerPage() {
+const OfferInnerPage = () => {
   const [maxnum, setMaxnum] = useState(false);
   const togglemaxnum = () => {
     setMaxnum(!maxnum);
@@ -12,10 +12,10 @@ function OfferInnerPage() {
 
   return (
     <div>
-      <img src={OfferInnerPageImg} alt="" className="w-full" />
+      <img src={OfferInnerPageImg} alt="" className="w-full relative" />
 
       {/* ============================================valid On ============================================*/}
-      <div className="container mx-auto">
+      <div className="container mx-auto ">
         <div className="grid grid-cols-1 lg:grid-cols-5 md:grid-cols-1">
           <div className="text-center py-5 bg-gray-100 mx-[1px] my-[1px] w-full">
             <h1 className="text-sm text-gray-600 font-semibold">VALID ON</h1>
@@ -57,29 +57,73 @@ function OfferInnerPage() {
           <div className=" mt-10">
             <h1 className="underline">FAQS</h1>
 
-            <button
-              onClick={togglemaxnum}
-              className="mt-5 flex   font-semibold border-2 border-themecolor1 p-2 rounded"
-            >
-              {maxnum ? (
-                <CiCircleMinus className="text-xl my-auto mr-3" />
-              ) : (
-                <CiCirclePlus className="text-xl my-auto mr-3" />
+            <div className="border-2 border-themecolor1 mt-5">
+              <button
+                onClick={togglemaxnum}
+                className=" flex   font-semibold  p-2 rounded"
+              >
+                {maxnum ? (
+                  <CiCircleMinus className="text-xl my-auto mr-3" />
+                ) : (
+                  <CiCirclePlus className="text-xl my-auto mr-3" />
+                )}
+                what are the maximum number of free tickets one call avail?
+              </button>
+              {maxnum && (
+                <p className=" my-2 mx-2">
+                  sapiente exercitationem odio quia, animi eos distinctio
+                  tempora, ipsum hic vitae modi eum nostrum id perspiciatis
+                  impedit dolores.
+                </p>
               )}
-              what are the maximum number of free tickets one call avail?
-            </button>
-            {maxnum && (
-              <p className=" mt-2">
-                sapiente exercitationem odio quia, animi eos distinctio tempora,
-                ipsum hic vitae modi eum nostrum id perspiciatis impedit
-                dolores.
-              </p>
-            )}
+            </div>
+            <div className="border-2 border-themecolor1 mt-5">
+              <button
+                onClick={togglemaxnum}
+                className=" flex   font-semibold  p-2 rounded"
+              >
+                {maxnum ? (
+                  <CiCircleMinus className="text-xl my-auto mr-3" />
+                ) : (
+                  <CiCirclePlus className="text-xl my-auto mr-3" />
+                )}
+                what are the maximum number of free tickets one call avail?
+              </button>
+              {maxnum && (
+                <p className=" my-2 mx-2">
+                  sapiente exercitationem odio quia, animi eos distinctio
+                  tempora, ipsum hic vitae modi eum nostrum id perspiciatis
+                  impedit dolores.
+                </p>
+              )}
+            </div>
+            <div className="border-2 border-themecolor1 mt-5">
+              <button
+                onClick={togglemaxnum}
+                className=" flex   font-semibold  p-2 rounded"
+              >
+                {maxnum ? (
+                  <CiCircleMinus className="text-xl my-auto mr-3" />
+                ) : (
+                  <CiCirclePlus className="text-xl my-auto mr-3" />
+                )}
+                what are the maximum number of free tickets one call avail?
+              </button>
+              {maxnum && (
+                <p className=" my-2 mx-2">
+                  sapiente exercitationem odio quia, animi eos distinctio
+                  tempora, ipsum hic vitae modi eum nostrum id perspiciatis
+                  impedit dolores.
+                </p>
+              )}
+            </div>
+
+            <div></div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default OfferInnerPage;

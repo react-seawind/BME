@@ -1,14 +1,8 @@
 import React from "react";
-import {
-  FaBookmark,
-  FaCalendar,
-  FaMicrophone,
-  FaPlayCircle,
-  FaUser,
-} from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaPlayCircle } from "react-icons/fa";
 import Slider from "react-slick";
 import { FcCalendar } from "react-icons/fc";
-import { FaCirclePlay, FaLocationDot } from "react-icons/fa6";
+import { FaCirclePlay, FaLocationDot, FaXTwitter } from "react-icons/fa6";
 
 import { IoIosArrowForward } from "react-icons/io";
 
@@ -24,17 +18,10 @@ import {
   popularEventsdata,
 } from "../API";
 import { Link } from "react-router-dom";
-import {
-  CiBookmark,
-  CiCalendar,
-  CiFaceSmile,
-  CiLocationOn,
-  CiMicrophoneOn,
-  CiMusicNote1,
-} from "react-icons/ci";
+import { CiCalendar, CiLocationOn } from "react-icons/ci";
 import { BiCategory } from "react-icons/bi";
 
-function Home() {
+const Home =()=> {
   const bannerS = {
     className: "center",
     centerMode: true,
@@ -94,7 +81,7 @@ function Home() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
         },
@@ -120,13 +107,13 @@ function Home() {
   const featured = {
     infinite: false,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1044,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 1,
           infinite: true,
         },
@@ -142,7 +129,7 @@ function Home() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           initialSlide: 2,
         },
@@ -150,7 +137,7 @@ function Home() {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -174,7 +161,7 @@ function Home() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
         },
@@ -182,7 +169,7 @@ function Home() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           initialSlide: 2,
         },
@@ -200,7 +187,7 @@ function Home() {
   const music = {
     infinite: false,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     responsive: [
       {
@@ -222,7 +209,7 @@ function Home() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           initialSlide: 2,
         },
@@ -230,7 +217,7 @@ function Home() {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -254,7 +241,7 @@ function Home() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
         },
@@ -262,7 +249,7 @@ function Home() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           initialSlide: 2,
         },
@@ -337,8 +324,8 @@ function Home() {
       </div>
 
       {/*================================= Find New Experience =============================*/}
-      <section className="Magazine md:mt-20">
-        <div className="container mx-auto">
+      <section className="Magazine md:py-16 py-8">
+        <div className="container mx-auto px-5">
           <div className="flex items-center mx-4">
             <CiLocationOn className="border text-5xl p-2     rounded-xl" />{" "}
             <div>
@@ -369,28 +356,32 @@ function Home() {
       </section>
 
       {/*========================= Popualar Events ================================*/}
-      <section className="bg-slate-200   py-12 my-10">
-        <div className="container mx-auto">
-          <div className="populareventsLogo flex ml-4">
-            <FaPlayCircle className="md:text-5xl mt-1 text-2xl text-themecolor1 md:mx-0" />
-            <h1 className="md:text-3xl text-xl mx-3 font-bold ">
-              P R E M I E R E
-            </h1>
+      <section className="bg-slate-200   py-12 ">
+        <div className="container mx-auto px-5">
+          <div className="flex px-2 ">
+            <div>
+              <FaPlayCircle className="md:text-5xl mt-1 text-2xl text-themecolor1   mr-3" />
+            </div>
+            <div>
+              <h1 className="md:text-3xl text-xl   font-bold ">
+                P R E M I E R E
+              </h1>
+              <p className="text-sm">Watch new Popular events</p>
+            </div>
           </div>
-          <p className="md:mx-[76px] mx-[51px] md:-mt-4 -mt-0  text-sm">
-            Watch new Popular events
-          </p>
 
-          <h1 className="md:mt-10 mt-4 -my-1 ml-4 md:text-2xl text-xl font-semibold  ">
-            Popular Events
-          </h1>
-          <a
-            href="/event"
-            className="md:text-base text-sm text-themecolor1 flex justify-end mr-5 -mt-5 mb-2 font-semibold"
-          >
-            See All
-            <IoIosArrowForward className="mt-1" />
-          </a>
+          <div className="flex px-2 items-center my-3">
+            <h1 className="  md:text-2xl text-xl font-semibold  ">
+              Popular Events
+            </h1>
+            <Link
+              to="/BME/event"
+              className=" text-sm text-themecolor1 border  font-semibold flex items-center ml-auto py-2 px-3"
+            >
+              See All
+              <IoIosArrowForward />
+            </Link>
+          </div>
           <Slider {...popular}>
             {popularEventsdata.map((val, index) => {
               return (
@@ -399,7 +390,7 @@ function Home() {
                     <div className="rounded mx-2 p-2 bg-white">
                       <Link to={val.link}>
                         <img
-                          className="xl:h-96 lg:h-80 surface:h-80 rounded-md h-72 md:h-60 w-full"
+                          className="xl:h-96 lg:h-80 surface:h-80 rounded-md h-60 md:h-60 w-full"
                           src={val.img}
                           alt=""
                         />
@@ -424,26 +415,30 @@ function Home() {
       </section>
 
       {/* ==================================Featured Events =================================*/}
-      <section className="featurevents md:mt-20">
-        <div className="container mx-auto">
-          <h1 className="md:mt-10 mt-4 -my-1 ml-4 md:text-2xl text-xl font-semibold text-black flex items-center">
-            <CiBookmark className="border text-5xl p-2 rounded-xl mr-3" />{" "}
-            Featured Events
-          </h1>
-          <Link className="md:text-base text-sm text-themecolor1 flex justify-end mr-5 -mt-5 mb-2 font-semibold">
-            See All
-            <IoIosArrowForward className="mt-1" />
-          </Link>
+      <section className="md:py-16 py-8">
+        <div className="container mx-auto px-5 ">
+          <div className="flex px-2 items-center my-3">
+            <h1 className="  md:text-2xl text-xl font-semibold  ">
+              Featured Events
+            </h1>
+            <Link
+              to="/BME/event"
+              className=" text-sm text-themecolor1 border border-black rounded  font-semibold flex items-center ml-auto py-2 px-3"
+            >
+              See All
+              <IoIosArrowForward />
+            </Link>
+          </div>
 
           <Slider {...featured}>
             {featuredeventdata.map((val, index) => {
               return (
                 <div className="">
                   <div key={index}>
-                    <div className="max-w-sm overflow-hidden mx-4 border p-2 rounded-md shadow-lg">
+                    <div className="  overflow-hidden  mx-2 border p-2 rounded-md shadow-lg">
                       <Link to={val.link}>
                         <img
-                          className="xl:h-96 lg:h-80 surface:h-80 rounded-md rounded-e-none rounded-l-none h-96 md:h-60 w-full "
+                          className="xl:h-96 lg:h-80 surface:h-80 h-60 md:h-60 w-full rounded-md rounded-e-none rounded-l-none  "
                           src={val.img}
                           alt=""
                         />
@@ -451,29 +446,29 @@ function Home() {
                           <p className="bg-themecolor1 p-3">Event Name</p>
                         </div>
                         <div className=" pt-3">
-                          <div className="flex md:text-sm text-xs font-semibold mb-2">
-                            <p className="md:text-xl text-sm mx-1">
-                              <FcCalendar />
-                            </p>
-                            <h1>{val.tittle1}</h1>
+                          <div className="flex">
+                            <div className="flex md:text-sm text-xs font-semibold mb-2">
+                              <p className="md:text-xl text-sm mx-1">
+                                <FcCalendar />
+                              </p>
+                              <h1>{val.tittle1}</h1>
+                            </div>
+
+                            <div className="flex md:text-sm text-xs font-semibold mb-2 ml-auto">
+                              <p className="md:text-xl text-sm mx-1">
+                                <FaCirclePlay />
+                              </p>
+                              <h1>{val.tittle2}</h1>
+                            </div>
                           </div>
 
-                          <div className="flex md:text-sm text-xs font-semibold mb-2">
-                            <p className="md:text-xl text-sm mx-1">
-                              <FaCirclePlay />
-                            </p>
-                            <h1>{val.tittle2}</h1>
-                          </div>
+                          <div className="flex text-sm font-semibold  bg-pink-100 rounded-md py-1 px-2">
+                            <h1 className=" my-auto">₹ {val.price}</h1>
 
-                          <div className="flex text-sm font-semibold  bg-pink-100 rounded-md py-1">
-                            <h1 className="md:pl-1 pl-1 mr-auto my-auto">
-                              ₹ {val.price}
-                            </h1>
-
-                            <button className="">
+                            <button className="ml-auto">
                               <Link
                                 to="/BME/steps1"
-                                className="text-lg font-bold border-l-2 border-pink-400 md:pl-2 pl-1 pr-1"
+                                className="text-base font-bold border-l-2 border-pink-300 pl-2 "
                               >
                                 BUY NOW
                               </Link>
@@ -491,28 +486,30 @@ function Home() {
       </section>
 
       {/*================================= OutDoor Events===================================== */}
-      <section className="my-10 bg-slate-200">
-        <div className="container mx-auto py-10">
-          <h1 className="md:mt-10 mt-4 -my-1 ml-4 md:text-2xl text-xl font-semibold text-black">
-            OutDoor Events
-          </h1>
-          <Link
-            to={"/BME/event"}
-            className="md:text-base text-sm text-themecolor1 flex justify-end mr-5 -mt-5 mb-2 font-semibold"
-          >
-            See All
-            <IoIosArrowForward className="mt-1" />
-          </Link>
+      <section className="bg-slate-200">
+        <div className="container mx-auto py-10 px-5">
+          <div className="flex px-2 items-center my-3">
+            <h1 className="  md:text-2xl text-xl font-semibold  ">
+              OutDoor Events
+            </h1>
+            <Link
+              to="/BME/event"
+              className=" text-sm text-themecolor1  rounded  font-semibold flex items-center ml-auto py-2 px-3"
+            >
+              See All
+              <IoIosArrowForward />
+            </Link>
+          </div>
           <Slider {...outdoor}>
             {outDoorEventsdata.map((val, index) => {
               return (
                 <div>
                   <div key={index}>
                     <Link to={val.link}>
-                      <div className="overflow-hidden mx-2 border border-themecolor1 rounded-md p-2 bg-white">
+                      <div className="overflow-hidden mx-2    rounded-md bg-white">
                         <div className="rounded-xl">
                           <img
-                            className="xl:h-96 lg:h-80 surface:h-80 rounded-md h-72 md:h-60 w-full"
+                            className="xl:h-96 lg:h-80 surface:h-80 rounded-md h-60 md:h-60 w-full rounded-e-none rounded-l-none  "
                             src={val.img}
                             alt=""
                           />
@@ -536,9 +533,9 @@ function Home() {
       </section>
 
       {/* =======================Browse Events by Genre ==============================*/}
-      <section className="browseevents my-10">
-        <div className="container mx-auto ">
-          <h1 className="md:mt-10 mt-4 -my-1 ml-4 md:text-2xl text-xl font-semibold text-black flex items-center">
+      <section className="md:py-16 py-8">
+        <div className="container mx-auto  px-5">
+          <h1 className="  ml-4 md:text-2xl text-xl font-semibold text-black flex items-center">
             <BiCategory className="border text-5xl p-2 rounded-xl mr-3" />{" "}
             Browse Events
           </h1>
@@ -547,7 +544,7 @@ function Home() {
               return (
                 <div className="  m-4" key={index}>
                   <h1
-                    className="text-center flex justify-center border  md:text-6xl text-2xl p-8 rounded-lg "
+                    className="text-center flex justify-center border  md:text-6xl text-2xl lg:p-8 p-4 rounded-lg "
                     href={val.link}
                   >
                     {val.logo}
@@ -571,27 +568,26 @@ function Home() {
       </section>
 
       {/* ==================================Music=====================================*/}
-      <section className="bg-slate-200 my-10">
-        <div className="container mx-auto py-10">
-          <h1 className="md:mt-10 mt-4 -my-1 ml-4 md:text-2xl text-xl font-semibold text-black flex items-center">
-            <CiMusicNote1 className="border text-5xl p-2 rounded-xl mr-3 border-black" />{" "}
-            Music
-          </h1>
-          <Link
-            to={"/BME/event"}
-            className="md:text-base text-sm text-themecolor1 flex justify-end mr-5 -mt-5 mb-2 font-semibold"
-          >
-            See All
-            <IoIosArrowForward className="mt-1" />
-          </Link>
+      <section className="bg-slate-200  md:py-16 py-8">
+        <div className="container mx-auto  px-5">
+          <div className="flex px-2 items-center my-3">
+            <h1 className="  md:text-2xl text-xl font-semibold  ">Music</h1>
+            <Link
+              to="/BME/event"
+              className=" text-sm text-themecolor1 border border-black rounded  font-semibold flex items-center ml-auto py-2 px-3"
+            >
+              See All
+              <IoIosArrowForward />
+            </Link>
+          </div>
           <Slider {...music}>
             {musicdata.map((val, index) => {
               return (
                 <div key={index}>
-                  <div className="mx-4 border p-2 rounded-md shadow-lg bg-white">
+                  <div className=" mx-2 border p-2 rounded-md shadow-lg bg-white">
                     <Link to={val.link}>
                       <img
-                        className="xl:h-96 lg:h-80 surface:h-80 rounded-md rounded-e-none rounded-l-none h-96 md:h-60 w-full "
+                        className="xl:h-96 lg:h-80 surface:h-80 rounded-md h-60 md:h-60 w-full rounded-e-none rounded-l-none "
                         src={val.img}
                         alt=""
                       />
@@ -608,6 +604,18 @@ function Home() {
                           <h1 className="line-clamp-1">{val.des}</h1>
                         </div>
                       </div>
+                      <div className="flex text-sm font-semibold  bg-pink-100 rounded-md py-1 px-2">
+                        <h1 className=" my-auto">Free</h1>
+
+                        <button className="ml-auto">
+                          <Link
+                            to="/BME/steps1"
+                            className="text-base font-bold border-l-2 border-pink-300 pl-2 "
+                          >
+                            BUY NOW
+                          </Link>
+                        </button>
+                      </div>
                     </Link>
                   </div>
                 </div>
@@ -618,24 +626,26 @@ function Home() {
       </section>
 
       {/* ======================================Comedy===================================== */}
-      <section className="comedy md:mt-20 mt-5">
-        <div className="container mx-auto">
-          <h1 className="md:mt-10 mt-4 -my-1 ml-4 md:text-2xl text-xl font-semibold text-black flex items-center">
-            <CiFaceSmile className="border text-5xl p-2 rounded-xl mr-3 border-black" />{" "}
-            Comedy
-          </h1>
-          <Link className="md:text-base text-sm text-themecolor1 flex justify-end mr-5 -mt-5 mb-2 font-semibold">
-            See All
-            <IoIosArrowForward className="mt-1" />
-          </Link>
+      <section className="md:py-16 py-8">
+        <div className="container mx-auto px-5">
+          <div className="flex px-2 items-center my-3">
+            <h1 className="  md:text-2xl text-xl font-semibold  ">Comedy</h1>
+            <Link
+              to="/BME/event"
+              className=" text-sm text-themecolor1 border border-black rounded  font-semibold flex items-center ml-auto py-2 px-3"
+            >
+              See All
+              <IoIosArrowForward />
+            </Link>
+          </div>
           <Slider {...comedy}>
             {comedydata.map((val, index) => {
               return (
                 <div key={index}>
-                  <div className=" xl:mx-4 surface:mx-2 mx-1  border p-2 rounded-md shadow-lg bg-white">
+                  <div className="  mx-2   border p-2 rounded-md shadow-lg bg-white">
                     <Link to={val.link}>
                       <img
-                        className="xl:h-96 lg:h-80 surface:h-80 rounded-md rounded-e-none rounded-l-none h-48 md:h-60 w-full "
+                        className="xl:h-96 lg:h-80 surface:h-80 rounded-md h-60 md:h-60 w-full rounded-e-none rounded-l-none  "
                         src={val.img}
                         alt=""
                       />
@@ -662,8 +672,8 @@ function Home() {
       </section>
 
       {/* ======================================Event this Week===================================== */}
-      <section className="md:mt-20 mt-1">
-        <div className="container mx-auto">
+      <section className="md:py-8 py-4">
+        <div className="container mx-auto px-5">
           <h1 className="md:mt-10 mt-4 my-2 mx-4 md:text-2xl text-xl font-semibold text-black flex items-center">
             <CiCalendar className="border text-5xl p-2 rounded-xl mr-3" /> Event
             this Week
@@ -706,28 +716,27 @@ function Home() {
       </section>
 
       {/* ======================================Artist===================================== */}
-      <section className="Artist my-20">
-        <div className="container mx-auto">
-          <h1 className="md:mt-10 mt-4 my-2 ml-4 md:text-2xl text-xl font-semibold text-black flex items-center">
-            <CiMicrophoneOn className="border text-5xl p-2   mr-3 rounded-xl" />{" "}
-            Artist
-          </h1>
-          <Link
-            to={"/BME/artist"}
-            className="md:text-base text-sm text-themecolor1 flex justify-end mr-5 -mt-5 mb-2 font-semibold"
-          >
-            See All
-            <IoIosArrowForward className="mt-1" />
-          </Link>
+      <section className="md:py-8 py-4">
+        <div className="container mx-auto px-5">
+          <div className="flex px-4 items-center my-3">
+            <h1 className="  md:text-2xl text-xl font-semibold  ">Artist</h1>
+            <Link
+              to="/BME/event"
+              className=" text-sm text-themecolor1 border border-black rounded  font-semibold flex items-center ml-auto py-2 px-3"
+            >
+              See All
+              <IoIosArrowForward />
+            </Link>
+          </div>
           <Slider {...artist} className="">
             {artistdata.map((val, index) => {
               return (
                 <Link
-                  className="contain relative px-1 "
+                  className="contain relative p-2 "
                   key={index}
                   to={val.link}
                 >
-                  <div className="bg-white shadow-lg border border-themecolor1 rounded mx-2">
+                  <div className="bg-white shadow-md   rounded mx-2">
                     <img
                       src={val.img}
                       alt="Avatar"
@@ -740,6 +749,55 @@ function Home() {
               );
             })}
           </Slider>
+        </div>
+      </section>
+
+      <section className="py-10">
+        <div className="container mx-auto    px-5">
+          <div className="bg-slate-100 p-5 border rounded-md">
+            <p className="font-semibold">
+              Want to hear about the best things to do in your city?
+            </p>
+            <p className="text-3xl font-bold">SUBSCRIBE TO OUR NEWSLATTER!</p>
+            <p>
+              Join our mailing list and stay up to date with the latest event a
+              round you
+            </p>
+            <form className="my-3">
+              <input
+                type="text"
+                name=""
+                value=""
+                placeholder="abc@gmail.com"
+                className="border p-3"
+              />
+              <input
+                type="submit"
+                name=""
+                className="border bg-themecolor3 py-3 px-2 text-white cursor-pointer"
+                value="YES, I AM IN"
+              />
+            </form>
+            <div className="flex items-center flex-col md:flex-row">
+              <p className="font-bold mb-5 md:mb-0">
+                For Latest update follow:
+              </p>
+              <div className="flex items-center md:ml-auto ">
+                <div className="flex items-center border border-black mx-2 py-2 px-3 rounded-lg">
+                  <FaFacebook className="mr-2" />
+                  Facebook
+                </div>
+                <div className="flex items-center border border-black mx-2 py-2 px-3 rounded-lg">
+                  <FaXTwitter className="mr-2" />
+                  Twitter
+                </div>
+                <div className="flex items-center border border-black mx-2 py-2 px-3 rounded-lg">
+                  <FaInstagram className="mr-2" />
+                  Instagram
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

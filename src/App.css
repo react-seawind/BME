@@ -11,6 +11,12 @@ body {
   z-index: 2;
 }
 
+.slick-prev:before,
+.slick-next:before {
+  color: #DC3558 !important;
+  opacity: 1;
+}
+
 .slick-next {
   right: 0px !important;
 }

@@ -241,57 +241,57 @@ const popularEventsdata = [
 const featuredeventdata = [
   {
     img: FeaturedImg1,
-    tittle1: "Video on Demand",
-    tittle2: "Watch on Insider",
+    tittle1: "12-12-2023",
+    tittle2: "Offline",
     price: "700",
     link: "/BME/event",
   },
   {
     img: FeaturedImg3,
-    tittle1: "Video on Demand",
-    tittle2: "Watch on Insider",
+    tittle1: "12-12-2023",
+    tittle2: "Offline",
     price: "1000",
     link: "/BME/event",
   },
   {
     img: FeaturedImg2,
-    tittle1: "Video on Demand",
-    tittle2: "Watch on Insider",
+    tittle1: "12-12-2023",
+    tittle2: "Offline",
     price: "300",
     link: "/BME/event",
   },
   {
     img: FeaturedImg5,
-    tittle1: "Video on Demand",
-    tittle2: "Watch on Insider",
+    tittle1: "12-12-2023",
+    tittle2: "Offline",
     price: "1500",
     link: "/BME/event",
   },
   {
     img: FeaturedImg4,
-    tittle1: "Video on Demand",
-    tittle2: "Watch on Insider",
+    tittle1: "12-12-2023",
+    tittle2: "Offline",
     price: "1000",
     link: "/BME/event",
   },
   {
     img: FeaturedImg6,
-    tittle1: "Video on Demand",
-    tittle2: "Watch on Insider",
+    tittle1: "12-12-2023",
+    tittle2: "Offline",
     price: "1000",
     link: "/BME/event",
   },
   {
     img: FeaturedImg7,
-    tittle1: "Video on Demand",
-    tittle2: "Watch on Insider",
+    tittle1: "12-12-2023",
+    tittle2: "Offline",
     price: "700",
     link: "/BME/event",
   },
   {
     img: FeaturedImg8,
-    tittle1: "Video on Demand",
-    tittle2: "Watch on Insider",
+    tittle1: "12-12-2023",
+    tittle2: "Offline",
     price: "300",
     link: "/BME/event",
   },
@@ -661,43 +661,56 @@ const eventdata1 = [
     img: Events1,
     tittle: "Kirtidan Gadhvi",
     des: "Gujarati",
+    price: "100",
     link: "/BME/eventbook",
   },
   {
     img: Events2,
     tittle: "Kirtidan Gadhvi",
     des: "Gujarati",
+    price: "100",
     link: "/BME/eventbook",
   },
-  { img: Events3, tittle: "Sonu Nigam", des: "Hindi", link: "/BME/eventbook" },
+  {
+    img: Events3,
+    tittle: "Sonu Nigam",
+    des: "Hindi",
+    link: "/BME/eventbook",
+    price: "100",
+  },
   {
     img: Events4,
     tittle: "Sachet-Parampara",
     des: "Hindi",
+    price: "100",
     link: "/BME/eventbook",
   },
   {
     img: Events5,
     tittle: "Aditya Gadhvi",
     des: "Gujarati",
+    price: "100",
     link: "/BME/eventbook",
   },
   {
     img: Events6,
     tittle: "Gaman Santhal",
     des: "Gujarati",
+    price: "100",
     link: "/BME/eventbook",
   },
   {
     img: Events7,
     tittle: "Kirtidan Gadhvi",
     des: "Gujarati",
+    price: "100",
     link: "/BME/eventbook",
   },
   {
     img: Events8,
     tittle: "Geeta Rabari",
     des: "Gujarati",
+    price: "100",
     link: "/BME/eventbook",
   },
 ];
@@ -896,7 +909,7 @@ const creditcarddata = [
       "Get 2 free movie tickets or INR 500 off whichever is less with SBI Signature/Elite credit cards",
   },
   {
-    link: "/BME/event",
+    link: "/BME/offerinnerpage",
     img: CreditcardImg1,
     bankimg: BankImg1,
     tittle: "SBI SIGNATURE/ELITE CREDITCARD",
@@ -906,7 +919,7 @@ const creditcarddata = [
       "Get 2 free movie tickets or INR 500 off whichever is less with SBI Signature/Elite credit cards",
   },
   {
-    link: "/BME/event",
+    link: "/BME/offerinnerpage",
     img: CreditcardImg1,
     bankimg: BankImg1,
     tittle: "SBI SIGNATURE/ELITE CREDITCARD",
@@ -916,7 +929,7 @@ const creditcarddata = [
       "Get 2 free movie tickets or INR 500 off whichever is less with SBI Signature/Elite credit cards",
   },
   {
-    link: "/BME/event",
+    link: "/BME/offerinnerpage",
     img: CreditcardImg1,
     bankimg: BankImg1,
     tittle: "SBI SIGNATURE/ELITE CREDITCARD",
@@ -926,7 +939,7 @@ const creditcarddata = [
       "Get 2 free movie tickets or INR 500 off whichever is less with SBI Signature/Elite credit cards",
   },
   {
-    link: "/BME/event",
+    link: "/BME/offerinnerpage",
     img: CreditcardImg1,
     bankimg: BankImg1,
     tittle: "SBI SIGNATURE/ELITE CREDITCARD",
@@ -939,7 +952,7 @@ const creditcarddata = [
 
 const debitcarddata = [
   {
-    link: "/BME/event",
+    link: "/BME/offerinnerpage",
     img: DebitCardImg1,
     bankimg: Visa,
     tittle: "VISA INFINITE CARD OFFER",
@@ -952,7 +965,7 @@ const debitcarddata = [
 
 const bookmyeventdata = [
   {
-    link: "/BME/event",
+    link: "/BME/offerinnerpage",
     img: BookMyeventImg1,
     bankimg: Logo,
     tittle: "B1G1 TICKET FREE - USE C...",
@@ -964,7 +977,7 @@ const bookmyeventdata = [
 
 const walletdata = [
   {
-    link: "/BME/event",
+    link: "/BME/offerinnerpage",
     img: Wallet,
     bankimg: WalletLogo,
     tittle: "AMAZON PAY CASHBACK ...",
@@ -976,7 +989,7 @@ const walletdata = [
 
 const rewardsdata = [
   {
-    link: "/BME/event",
+    link: "/BME/offerinnerpage",
     img: CreditcardImg1,
     bankimg: BankImg1,
     tittle: "SBI SIGNATURE/ELITE CREDITCARD",
@@ -989,7 +1002,7 @@ const rewardsdata = [
 
 const paylaterdata = [
   {
-    link: "/BME/event",
+    link: "/BME/offerinnerpage",
     img: Paylatter,
     bankimg: PaylaterLogo,
     tittle: "SIMPLE CASHBACK OFFER",
@@ -1000,14 +1013,58 @@ const paylaterdata = [
 ];
 
 const youlisting = [
-  { img: Events1, title: "Kirtidan Gadhvi" },
-  { img: Events2, title: "Kirtidan Gadhvi" },
-  { img: Events3, title: "Kirtidan Gadhvi" },
-  { img: Events4, title: "Kirtidan Gadhvi" },
-  { img: Events5, title: "Kirtidan Gadhvi" },
-  { img: Events6, title: "Gaman Santhal" },
-  { img: Events7, title: "Kirtidan Gadhvi" },
-  { img: Events8, title: "Geeta Rabari" },
+  { img: Events1, Id: "1", title: "Kirtidan Gadhvi" },
+  { img: Events2, Id: "2", title: "Kirtidan Gadhvi" },
+  { img: Events3, Id: "3", title: "Kirtidan Gadhvi" },
+  { img: Events4, Id: "4", title: "Kirtidan Gadhvi" },
+  { img: Events5, Id: "5", title: "Kirtidan Gadhvi" },
+  { img: Events6, Id: "6", title: "Gaman Santhal" },
+  { img: Events7, Id: "7", title: "Kirtidan Gadhvi" },
+  { img: Events8, Id: "8", title: "Geeta Rabari" },
+];
+const Bookingdata = [
+  {
+    name: "test",
+    email: "test@gmail.com",
+    Tickettype: "Gold",
+    noofticket: "10",
+    amount: "100",
+  },
+  {
+    name: "test",
+    email: "test@gmail.com",
+    Tickettype: "Gold",
+    noofticket: "10",
+    amount: "100",
+  },
+  {
+    name: "test",
+    email: "test@gmail.com",
+    Tickettype: "Gold",
+    noofticket: "10",
+    amount: "100",
+  },
+  {
+    name: "test",
+    email: "test@gmail.com",
+    Tickettype: "Gold",
+    noofticket: "10",
+    amount: "100",
+  },
+  {
+    name: "test",
+    email: "test@gmail.com",
+    Tickettype: "Gold",
+    noofticket: "10",
+    amount: "100",
+  },
+  {
+    name: "test",
+    email: "test@gmail.com",
+    Tickettype: "Gold",
+    noofticket: "10",
+    amount: "100",
+  },
 ];
 
 export {
@@ -1032,4 +1089,5 @@ export {
   artistdata,
   buttondata,
   youlisting,
+  Bookingdata,
 };

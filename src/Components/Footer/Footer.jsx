@@ -25,23 +25,23 @@ function Footer() {
   ];
 
   const countriesdata = [
-    { des: "Indonesia", link: "" },
-    { des: "Singapore", link: "" },
-    { des: "UAE", link: "" },
-    { des: "Sri Lanka", link: "" },
-    { des: "West Indies", link: "" },
+    { des: "Indonesia", link: "/BME" },
+    { des: "Singapore", link: "/BME" },
+    { des: "UAE", link: "/BME" },
+    { des: "Sri Lanka", link: "/BME" },
+    { des: "West Indies", link: "/BME" },
   ];
 
   const helpdata = [
     { des: "About Us", link: "/BME/about" },
     { des: "Contact Us", link: "/BME/contact" },
-    { des: "Current Opening", link: "" },
-    { des: "Press Release", link: "" },
-    { des: "Press Coverage", link: "" },
-    { des: "Sitemap", link: "" },
+    { des: "Current Opening", link: "/BME" },
+    { des: "Press Release", link: "/BME" },
+    { des: "Press Coverage", link: "/BME" },
+    { des: "Sitemap", link: "/BME" },
     { des: "FAQS", link: "/BME/faq" },
-    { des: "Terms and Conditions", link: "" },
-    { des: "Privacy Policy", link: "" },
+    { des: "Terms and Conditions", link: "/BME" },
+    { des: "Privacy Policy", link: "/BME" },
   ];
   return (
     <div className="mb-16 lg:mb-0">
@@ -71,14 +71,14 @@ function Footer() {
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-16">
               <div className="part1 hover:text-white text-[#A5A5A5]">
-                <Link>
+                <Link to={"/BME"}>
                   <RiCustomerService2Line className="text-5xl block m-auto " />
                   <h1 className="text-center text-sm">24/7 CUSTOMER CARE</h1>
                 </Link>
               </div>
 
               <div className="part1 hover:text-white text-[#A5A5A5]">
-                <Link>
+                <Link to={"/BME"}>
                   <IoTicketOutline className="text-5xl m-auto" />
                   <h1 className="text-center text-sm">
                     RESEND BOOKING CONFIRMATION
@@ -87,7 +87,7 @@ function Footer() {
               </div>
 
               <div className="part1 hover:text-white text-[#A5A5A5]">
-                <Link>
+                <Link to={"/BME"}>
                   <IoMailOutline className="text-5xl block m-auto" />
                   <h1 className="text-center text-sm">
                     SUBSCRIBE TO THE NEWSLETTER
@@ -108,12 +108,12 @@ function Footer() {
               {eventincitiesdata.map((val, index) => {
                 return (
                   <div key={index}>
-                    <a
-                      href={val.link}
+                    <Link
+                      to={val.link}
                       className="mx-2 md:mx-4 lg:mx-0 border-l border-[#7F7F7F] text-[#7F7F7F] px-1 lg:px-1 text-sm hover:text-white"
                     >
                       {val.des}
-                    </a>
+                    </Link>
                   </div>
                 );
               })}
@@ -129,12 +129,12 @@ function Footer() {
               {countriesdata.map((val, index) => {
                 return (
                   <div key={index}>
-                    <a
-                      href={val.link}
+                    <Link
+                      to={val.link}
                       className="mx-2 md:mx-4 lg:mx-0 border-l border-[#7F7F7F] text-[#7F7F7F] pl-1 lg:px-1 text-sm hover:text-white"
                     >
                       {val.des}
-                    </a>
+                    </Link>
                   </div>
                 );
               })}
@@ -150,12 +150,12 @@ function Footer() {
               {helpdata.map((val, index) => {
                 return (
                   <div key={index}>
-                    <a
-                      href={val.link}
+                    <Link
+                      to={val.link}
                       className="mx-2 md:mx-4 lg:mx-0 border-l border-[#7F7F7F] text-[#7F7F7F] px-1 lg:px-1 text-sm hover:text-white"
                     >
                       {val.des}
-                    </a>
+                    </Link>
                   </div>
                 );
               })}
@@ -165,22 +165,22 @@ function Footer() {
         <div className="border-b border-[#666666] pt-10"></div>
 
         <div className="social flex mt-8 justify-center pb-8 ">
-          <Link>
+          <Link to={"/BME"}>
             <FaFacebookF className="mx-1 bg-[#666666] hover:bg-white text-4xl p-2 rounded-full" />
           </Link>
-          <Link>
+          <Link to={"/BME"}>
             <FaXTwitter className="mx-1 bg-[#666666] hover:bg-white text-4xl p-2 rounded-full" />
           </Link>
-          <Link>
+          <Link to={"/BME"}>
             <FaInstagram className="mx-1 bg-[#666666] hover:bg-white text-4xl p-2 rounded-full" />
           </Link>
-          <Link>
+          <Link to={"/BME"}>
             <FaYoutube className="mx-1 bg-[#666666] hover:bg-white text-4xl p-2 rounded-full" />
           </Link>
-          <Link>
+          <Link to={"/BME"}>
             <FaPinterestP className="mx-1 bg-[#666666] hover:bg-white text-4xl p-2 rounded-full" />
           </Link>
-          <Link>
+          <Link to={"/BME"}>
             <FaLinkedinIn className="mx-1 bg-[#666666] hover:bg-white text-4xl p-2 rounded-full" />
           </Link>
         </div>

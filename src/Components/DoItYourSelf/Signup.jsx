@@ -16,7 +16,7 @@ export default function SignUp() {
             Benefits of using-Do It Yourself our new event management tool
           </h1>
 
-          <div className="flex border-2 border-themecolor1 rounded my-5 xl:mx-32 lg:mx-14 md:mx-6 mx-3 p-2">
+          <div className="flex shadow-lg rounded my-5 xl:mx-32 lg:mx-14 md:mx-6 mx-3 p-4">
             <div className="text-7xl my-auto">
               <IoIosLaptop className="" />
             </div>
@@ -29,7 +29,7 @@ export default function SignUp() {
             </div>
           </div>
 
-          <div className="flex border-2 border-themecolor1 rounded my-5  xl:mx-32 lg:mx-14 md:mx-6 mx-3 p-2">
+          <div className="flex shadow-lg rounded my-5  xl:mx-32 lg:mx-14 md:mx-6 mx-3 p-4">
             <div className="text-7xl my-auto">
               <GoClock className="" />
             </div>
@@ -44,7 +44,7 @@ export default function SignUp() {
             </div>
           </div>
 
-          <div className="flex border-2 border-themecolor1 rounded my-5  xl:mx-32 lg:mx-14 md:mx-6 mx-3 p-2">
+          <div className="flex shadow-lg rounded my-5  xl:mx-32 lg:mx-14 md:mx-6 mx-3 p-4">
             <div className="text-7xl my-auto">
               <MdMonitor className="" />
             </div>
@@ -62,9 +62,10 @@ export default function SignUp() {
 
         {/*============================================ Form Part=================================================== */}
         <div className="py-12 my-auto ">
-          <div className=" shadow[0px 3px 10px -3px] border-2 border-themecolor1 xl:mx-72 surface:mx-28  mx-5 rounded-3xl bg-white py-5   px-3">
+          <div className=" shadow[0px 3px 10px -3px] border-2 border-themecolor1 xl:mx-72 surface:mx-28  mx-5 rounded-xl bg-white py-5   px-3">
             <img src={LogoImg} alt="" className="p-2 w-[30%] mx-auto mb-10" />
 
+            <label for="phone">Enter Your Mobile No</label>
             <input
               type="tel"
               id="phone"
@@ -72,7 +73,7 @@ export default function SignUp() {
               required
               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
               placeholder="Enter your mobile no"
-              className="outline-none py-2 px-2  w-full rounded-md border bg-slate-100"
+              className="outline-none py-2 px-2  w-full rounded-md border bg-slate-100 mt-2"
             />
 
             <div className="grid grid-cols-1 gap-2 ">

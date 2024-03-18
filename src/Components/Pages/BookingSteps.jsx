@@ -5,7 +5,7 @@ import { FaMinus, FaPlus } from "react-icons/fa6";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 
-function UserDetails() {
+const UserDetails = () => {
   return (
     <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4">
       {/*============================= Venue ================================*/}
@@ -69,10 +69,10 @@ function UserDetails() {
       </div>
     </div>
   );
-}
+};
 
 //========================= Date and Time============================
-function Payment() {
+const Payment = () => {
   let [count, setCount] = useState(0);
 
   const incNum = () => {
@@ -116,10 +116,10 @@ function Payment() {
       </div>
     </div>
   );
-}
+};
 
 // ===========================Confirmation===========================
-function Confirmation() {
+const Confirmation = () => {
   const [isShowMore, setIsShowMore] = useState(false);
 
   const toggleReadMoreLess = () => {
@@ -259,9 +259,9 @@ function Confirmation() {
       </div>
     </div>
   );
-}
+};
 
-function Steps() {
+const Steps = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   const steps = [
@@ -314,6 +314,6 @@ function Steps() {
       </div>
     </div>
   );
-}
+};
 
 export default Steps;

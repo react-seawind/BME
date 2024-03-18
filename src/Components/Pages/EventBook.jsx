@@ -11,7 +11,7 @@ import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import Slider from "react-slick";
 import { popularEventsdata } from "../API";
 
-function EventBook() {
+const EventBook = () => {
   // ==============================About Part=======================================
   const [about, setAbout] = useState(false);
 
@@ -78,7 +78,7 @@ function EventBook() {
   };
 
   return (
-    <div className="bg-gray-100">
+    <div className="mt-6">
       {/*===================================== Banner Part =========================================*/}
       <div className="container  px-5 mx-auto pb-8 ">
         <img
@@ -119,7 +119,7 @@ function EventBook() {
         {/*=================================== Artist Data ====================================*/}
         <div className="lg:grid lg:grid-cols-4 lg:gap-4 my-9">
           <div className="w-full ">
-            <div className="p-5 bg-white">
+            <div className="p-5 bg-white shadow-md">
               <h1 className="border-b text-lg font-semibold">Artist</h1>
               <Link
                 to={"/BME/artistdetail"}
@@ -136,7 +136,7 @@ function EventBook() {
               </Link>
             </div>
 
-            <div className="p-3 bg-white mt-5">
+            <div className="p-3 bg-white mt-5 shadow-md">
               <h1 className="border-b text-lg font-semibold">
                 Share this event
               </h1>
@@ -154,7 +154,7 @@ function EventBook() {
           {/*=================================== Interested Part ====================================*/}
 
           <div className="-mx-0 col-span-2 md:w-full ">
-            <div className="p-5 bg-white mt-5 lg:mt-0">
+            <div className="p-5 bg-white mt-5 lg:mt-0 shadow-md">
               <h1 className="font-semibold ">
                 Click on Interested to stay updated about this event.
               </h1>
@@ -178,124 +178,125 @@ function EventBook() {
 
             {/*=================================== About Part ====================================*/}
 
-            <h1 className="mt-6 bg-white font-semibold py-3 px-5 border-b text-lg">
-              About
-            </h1>
-            <div className="card bg-white">
-              <p className="px-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-                numquam quia delectus quo vero quod iusto corrupti illum
-                accusamus odit hic ut ab minus eveniet, corporis ullam tempora
-                debitis iure. Repellat, molestias
-              </p>
-              {about && (
+            <div className="shadow-md bg-white">
+              <h1 className="mt-6   font-semibold py-3 px-5 border-b text-lg ">
+                About
+              </h1>
+              <div className="card bg-white">
                 <p className="px-5">
-                  sapiente exercitationem odio quia, animi eos distinctio
-                  tempora, ipsum hic vitae modi eum nostrum id perspiciatis
-                  impedit dolores.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                  numquam quia delectus quo vero quod iusto corrupti illum
+                  accusamus odit hic ut ab minus eveniet, corporis ullam tempora
+                  debitis iure. Repellat, molestias
                 </p>
-              )}
-
-              <button
-                onClick={toggleAbout}
-                className="text-themecolor1 text-xs px-5 py-3"
-              >
-                {about ? "Read Less" : "Read More"}
-              </button>
-            </div>
-
-            {/*========================== Terms & condition Part ===============================*/}
-
-            <div className="card bg-white w-full">
-              <button
-                onClick={toggletermsAcondi}
-                className=" text-base px-5 py-3 flex"
-              >
-                Terms & Condition
-                {termsAcondi ? (
-                  <MdKeyboardArrowUp className="mt-1" />
-                ) : (
-                  <MdKeyboardArrowDown className="mt-1" />
+                {about && (
+                  <p className="px-5">
+                    sapiente exercitationem odio quia, animi eos distinctio
+                    tempora, ipsum hic vitae modi eum nostrum id perspiciatis
+                    impedit dolores.
+                  </p>
                 )}
-              </button>
-              {termsAcondi && (
-                <p className="px-5 text-sm">
-                  <li className="py-1">Age Limit: Open to all</li>
-                  <li className="py-1">
-                    Tickets once booked cannot be exchanged or refunded.
-                  </li>
-                  <li className="py-1">
-                    An Internet handling fee per ticket may be levied. Please
-                    check the total amount before payment.{" "}
-                  </li>
-                  <li className="py-1">
-                    We recommend that you arrive at-least 30 minutes prior at
-                    the venue for a seamless entry.
-                  </li>
 
-                  <h1 className="font-bold py-4">COVID SAFETY GUIDELINES</h1>
-                  <li className="py-1">
-                    Owing to the recent conditions surrounding the COVID – 19
-                    pandemic, as a pre-condition to gaining access to the venue
-                    (events and theatres) you are required to be fully
-                    vaccinated and may be required to display your COVID – 19
-                    certificate at the venue as per the various norms
-                    /regulations prevailing in the said State. The venue
-                    provider and governing authorities reserve the right to
-                    exclude any user from the venue if there are sufficient
-                    grounds to believe so for failure to abide by the protocols.
-                    You agree to exit without protest or refund. Users are
-                    required to check the restrictions as applicable in their
-                    State
-                  </li>
-                  <li className="py-1">
-                    Use of masks is mandatory at all times and the visitors are
-                    required to maintain social distancing norms. The venue and
-                    Bigtree reserve the right to change/modify the terms and
-                    conditions.
-                  </li>
-                  <li className="py-1">
-                    Bigtree does not assume any responsibility with regards to
-                    any injury or complications due to COVID – 19 accrued as a
-                    result of your participation.
-                  </li>
-                  <li className="py-1">
-                    The above guidelines are currently mandatory for Delhi/NCR,
-                    Maharashtra and Karnataka. These terms and conditions may
-                    vary depending on the state where the event is held and are
-                    subject to changes
-                  </li>
-                </p>
-              )}
+                <button
+                  onClick={toggleAbout}
+                  className="text-themecolor1 text-xs px-5 py-3"
+                >
+                  {about ? "Read Less" : "Read More"}
+                </button>
+              </div>
+              {/*========================== Terms & condition Part ===============================*/}
 
-              {/*=================================== You May Also Liken Part ====================================*/}
+              <div className="card bg-white w-full">
+                <button
+                  onClick={toggletermsAcondi}
+                  className=" text-base px-5 py-3 flex"
+                >
+                  Terms & Condition
+                  {termsAcondi ? (
+                    <MdKeyboardArrowUp className="mt-1" />
+                  ) : (
+                    <MdKeyboardArrowDown className="mt-1" />
+                  )}
+                </button>
+                {termsAcondi && (
+                  <p className="px-5 text-sm">
+                    <li className="py-1">Age Limit: Open to all</li>
+                    <li className="py-1">
+                      Tickets once booked cannot be exchanged or refunded.
+                    </li>
+                    <li className="py-1">
+                      An Internet handling fee per ticket may be levied. Please
+                      check the total amount before payment.{" "}
+                    </li>
+                    <li className="py-1">
+                      We recommend that you arrive at-least 30 minutes prior at
+                      the venue for a seamless entry.
+                    </li>
 
-              <h1 className="py-2 px-5 font-bold">You May Also Like</h1>
-              <Slider {...popular} className="mx-2 md:mx-4">
-                {popularEventsdata.map((val, index) => {
-                  return (
-                    <>
-                      <div key={index}>
-                        <div className="max-w-sm rounded overflow-hidden mt-3 px-2">
-                          <img
-                            className="rounded-sm h-[300px] w-full lg:w-full"
-                            src={val.img}
-                            alt="Sunset in the mountains"
-                          />
-                          <div className="px-1S py-4">
-                            <div className="font-bold text-sm mb-2 text-black">
-                              <h1 className="line-clamp-1">{val.tittle}</h1>
+                    <h1 className="font-bold py-4">COVID SAFETY GUIDELINES</h1>
+                    <li className="py-1">
+                      Owing to the recent conditions surrounding the COVID – 19
+                      pandemic, as a pre-condition to gaining access to the
+                      venue (events and theatres) you are required to be fully
+                      vaccinated and may be required to display your COVID – 19
+                      certificate at the venue as per the various norms
+                      /regulations prevailing in the said State. The venue
+                      provider and governing authorities reserve the right to
+                      exclude any user from the venue if there are sufficient
+                      grounds to believe so for failure to abide by the
+                      protocols. You agree to exit without protest or refund.
+                      Users are required to check the restrictions as applicable
+                      in their State
+                    </li>
+                    <li className="py-1">
+                      Use of masks is mandatory at all times and the visitors
+                      are required to maintain social distancing norms. The
+                      venue and Bigtree reserve the right to change/modify the
+                      terms and conditions.
+                    </li>
+                    <li className="py-1">
+                      Bigtree does not assume any responsibility with regards to
+                      any injury or complications due to COVID – 19 accrued as a
+                      result of your participation.
+                    </li>
+                    <li className="py-1">
+                      The above guidelines are currently mandatory for
+                      Delhi/NCR, Maharashtra and Karnataka. These terms and
+                      conditions may vary depending on the state where the event
+                      is held and are subject to changes
+                    </li>
+                  </p>
+                )}
+
+                {/*=================================== You May Also Liken Part ====================================*/}
+
+                <h1 className="py-2 px-5 font-bold">You May Also Like</h1>
+                <Slider {...popular} className="mx-2 md:mx-4">
+                  {popularEventsdata.map((val, index) => {
+                    return (
+                      <div className="bg-slate-200 px-2">
+                        <Link to={"/BME/event"} key={index}>
+                          <div className="max-w-sm rounded overflow-hidden mt-3 ">
+                            <img
+                              className="rounded-sm h-[300px] w-full lg:w-full"
+                              src={val.img}
+                              alt="Sunset in the mountains"
+                            />
+                            <div className="px-1S py-4">
+                              <div className="font-bold text-sm mb-2 text-black">
+                                <h1 className="line-clamp-1">{val.tittle}</h1>
+                              </div>
+                              <p className="text-black text-sm line-clamp-1">
+                                {val.des}
+                              </p>
                             </div>
-                            <p className="text-black text-sm line-clamp-1">
-                              {val.des}
-                            </p>
                           </div>
-                        </div>
+                        </Link>
                       </div>
-                    </>
-                  );
-                })}
-              </Slider>
+                    );
+                  })}
+                </Slider>
+              </div>
             </div>
           </div>
 
@@ -335,6 +336,6 @@ function EventBook() {
       </div>
     </div>
   );
-}
+};
 
 export default EventBook;

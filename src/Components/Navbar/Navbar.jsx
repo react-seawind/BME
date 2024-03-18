@@ -156,7 +156,7 @@ export default function Example({ color }) {
     {
       logo1: <IoBagOutline />,
       logo2: <FaAngleRight />,
-      text: "Your Ouder",
+      text: "Your Booking",
       des: "view all your boking & purchase",
     },
     {
@@ -243,10 +243,10 @@ export default function Example({ color }) {
                             name=""
                             value=""
                             onClick={() => setShowModal(true)}
-                            className="pl-7 py-2 px-4 w-96"
+                            className="pl-7 py-2 px-4 xl:w-[28rem] lg:w-[24rem] md:w-[22rem] surface:w-[22rem]"
                             placeholder="Search for Events, Plays, Sports and Activites"
                           />
-                          <FaSearch className="absolute top-3 left-1" />
+                          <FaSearch className="absolute top-3 left-2" />
                         </button>
                       </div>
                       <div className="hidden md:block">
@@ -269,7 +269,7 @@ export default function Example({ color }) {
                         </button>
 
                         {/*======================= mobile Menu =======================*/}
-                        <div className="max-w-[1640px] px-3 ml-auto flex items-center">
+                        <div className="max-w-[1640px] pl-3 ml-auto flex items-center">
                           <div className="flex">
                             <div
                               onClick={() => setNav(!nav)}
@@ -399,7 +399,7 @@ export default function Example({ color }) {
                   <div className="relative  items-center justify-between w-full md:w-full ">
                     <div className="absolute inset-y-0 left-0 flex items-center justify-center sm:hidden ">
                       {/* Mobile menu button*/}
-                      <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-1 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                      <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-1 ">
                         <span className="absolute -inset-0.5" />
                         <span className="sr-only">Open main menu</span>
                         {open ? (
@@ -421,7 +421,7 @@ export default function Example({ color }) {
                           name=""
                           value=""
                           onClick={() => setShowModal(true)}
-                          className="pl-7 py-2 px-4 w-[22rem]"
+                          className="pl-7 py-2 px-4 w-[20.5rem]"
                           placeholder="Search for Events, Plays, Sports and Activites"
                         />
                         <FaSearch className="absolute top-3 left-1" />
@@ -431,17 +431,17 @@ export default function Example({ color }) {
                       <div className="hidden sm:block mr-auto">
                         <div className="flex space-x-4">
                           {navigation1.map((item) => (
-                            <a
+                            <Link
                               key={item.name}
-                              href={item.href}
+                              to={item.href}
                               className={classNames(
                                 item.current ? " text-black " : "text-black  ",
-                                "rounded-md px-2 py-3 text-sm font-medium"
+                                "rounded-md px-2 py-3 text-[0.975rem] font-medium"
                               )}
                               aria-current={item.current ? "page" : undefined}
                             >
                               {item.name}
-                            </a>
+                            </Link>
                           ))}
                         </div>
                       </div>
@@ -449,17 +449,17 @@ export default function Example({ color }) {
                       <div className="hidden sm:block ml-auto justify-end">
                         <div className="flex space-x-4 justify-end">
                           {navigation2.map((item) => (
-                            <a
+                            <Link
                               key={item.name}
-                              href={item.href}
+                              to={item.href}
                               className={classNames(
                                 item.current ? " text-black" : "text-black ",
-                                "rounded-md px-2 py-3 text-sm font-medium"
+                                "rounded-md px-2 py-3 text-[0.975rem] font-medium"
                               )}
                               aria-current={item.current ? "page" : undefined}
                             >
                               {item.name}
-                            </a>
+                            </Link>
                           ))}
                         </div>
                       </div>
@@ -741,12 +741,12 @@ export default function Example({ color }) {
                                       </h1>
                                       {val.subdata.map((subVal, subIndex) => (
                                         <div key={subIndex}>
-                                          <a
-                                            href={subVal.link}
+                                          <Link
+                                            to={subVal.link}
                                             className="text-xs md:text-sm py-1 hover:underline"
                                           >
                                             {subVal.des}
-                                          </a>
+                                          </Link>
                                         </div>
                                       ))}
                                     </div>
@@ -834,13 +834,13 @@ export default function Example({ color }) {
                             <div className="grid lg:grid-cols-5 md:grid-cols-2 sm:grid-cols-1">
                               {areadata.map((val, index) => {
                                 return (
-                                  <a
+                                  <Link
                                     key={index}
-                                    href={val.link}
+                                    to={val.link}
                                     className="text-sm w-full text-gray-500 hover:text-black"
                                   >
                                     {val.tittle}
-                                  </a>
+                                  </Link>
                                 );
                               })}
                             </div>

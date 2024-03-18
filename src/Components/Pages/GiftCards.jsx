@@ -7,29 +7,89 @@ import "./GiftCards.css";
 import { MdCurrencyRupee } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-function GiftCards() {
+const GiftCards = () => {
   const [openTab, setOpenTab] = React.useState(1);
   const [openTab1, setOpenTab1] = React.useState(1);
 
   const alldata = [
-    { link: "/BME/giftcardinnerpage", img: GiftCardImg },
-    { link: "/BME/giftcardinnerpage",img: GiftCardImg },
-    { link: "/BME/giftcardinnerpage",img: GiftCardImg },
-    { link: "/BME/giftcardinnerpage",img: GiftCardImg },
+    {
+      link: "/BME/giftcardinnerpage",
+      title: "Gift Name",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      img: GiftCardImg,
+    },
+    {
+      link: "/BME/giftcardinnerpage",
+      title: "Gift Name",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      img: GiftCardImg,
+    },
+    {
+      link: "/BME/giftcardinnerpage",
+      title: "Gift Name",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      img: GiftCardImg,
+    },
+    {
+      link: "/BME/giftcardinnerpage",
+      title: "Gift Name",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      img: GiftCardImg,
+    },
   ];
 
   const grnricdata = [
-    { img: GenricImg },
-    { img: GenricImg },
-    { img: GenricImg },
-    { img: GenricImg },
+    {
+      title: "Gift Name",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      img: GenricImg,
+      link: "/BME/giftcardinnerpage",
+    },
+    {
+      title: "Gift Name",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      img: GenricImg,
+      link: "/BME/giftcardinnerpage",
+    },
+    {
+      title: "Gift Name",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      img: GenricImg,
+      link: "/BME/giftcardinnerpage",
+    },
+    {
+      title: "Gift Name",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      img: GenricImg,
+      link: "/BME/giftcardinnerpage",
+    },
   ];
 
   const occasiondata = [
-    { img: OccasionImg },
-    { img: OccasionImg },
-    { img: OccasionImg },
-    { img: OccasionImg },
+    {
+      title: "Gift Name",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      img: OccasionImg,
+      link: "/BME/giftcardinnerpage",
+    },
+    {
+      title: "Gift Name",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      img: OccasionImg,
+      link: "/BME/giftcardinnerpage",
+    },
+    {
+      title: "Gift Name",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      img: OccasionImg,
+      link: "/BME/giftcardinnerpage",
+    },
+    {
+      title: "Gift Name",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      img: OccasionImg,
+      link: "/BME/giftcardinnerpage",
+    },
   ];
 
   const combodata = [
@@ -79,31 +139,6 @@ function GiftCards() {
     <div>
       <div className="flex w-full flex-wrap">
         <div className="w-full bg-gray-100">
-          <ul
-            className="InnerNavPills flex mb-0 list-none md:w-[45%] lg:w-[30%] flex-wrap pt-3 pb-4 flex-row ml-auto mr-auto "
-            role="tablist"
-          >
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
-              <a
-                className={
-                  "text-xs font-semibold uppercase px-6 py-3 mx-2 border rounded block leading-normal" +
-                  (openTab === 1
-                    ? "text-black bg-white"
-                    : "text-gray-500 bg-gray-200")
-                }
-                onClick={(e) => {
-                  e.preventDefault();
-                  setOpenTab(1);
-                }}
-                data-toggle="tab"
-                href="#link1"
-                role="tablist"
-              >
-                E-GIFT CARDS
-              </a>
-            </li>
-          </ul>
-
           {/* =======================================Nav Pilss data ==============================================*/}
           <div className="lg:relative flex  flex-col min-w-0 break-words bg-white w-full rounded">
             <div className=" flex-auto">
@@ -132,7 +167,7 @@ function GiftCards() {
                               setOpenTab1(1);
                             }}
                             data-toggle="tab"
-                            href="#link2"
+                            href="#link1"
                             role="tablist"
                           >
                             All
@@ -172,14 +207,14 @@ function GiftCards() {
                               setOpenTab1(3);
                             }}
                             data-toggle="tab"
-                            href="#link2"
+                            href="#link3"
                             role="tablist"
                           >
                             Occasion
                           </a>
                         </li>
 
-                        <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+                        {/*<li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
                           <a
                             className={
                               "text-xs font-bold  w-full py-3 border rounded-full block leading-normal " +
@@ -197,7 +232,7 @@ function GiftCards() {
                           >
                             Combos
                           </a>
-                        </li>
+                          </li>*/}
                       </ul>
 
                       {/* =======================================E-gift card ==============================================*/}
@@ -214,13 +249,29 @@ function GiftCards() {
                                 <div className="grid grid-cols-1 md:grid-cols-4 px-11">
                                   {alldata.map((val, index) => {
                                     return (
-                                      <div key={index}>
+                                      <div
+                                        key={index}
+                                        className="mx-2 p-3 rounded-lg  my-5 shadow-md"
+                                      >
                                         <Link to={val.link}>
                                           <img
                                             src={val.img}
                                             alt=""
-                                            className="px-2 my-5"
+                                            className=""
                                           />
+                                          <h1 className="text-2xl font-bold py-1">
+                                            {val.title}
+                                          </h1>
+                                          <p className="py-1">{val.desc}</p>
+
+                                          <Link to={"/BME/giftcardinnerpage"}>
+                                            <button
+                                              type=""
+                                              className="bg-themecolor1 w-full py-2 text-white font-bold mt-2"
+                                            >
+                                              Book
+                                            </button>
+                                          </Link>
                                         </Link>
                                       </div>
                                     );
@@ -238,12 +289,30 @@ function GiftCards() {
                                 <div className="grid grid-cols-1 md:grid-cols-4 px-11">
                                   {grnricdata.map((val, index) => {
                                     return (
-                                      <div key={index}>
-                                        <img
-                                          src={val.img}
-                                          alt=""
-                                          className="px-2 my-5"
-                                        />
+                                      <div
+                                        key={index}
+                                        className="mx-2 p-3 rounded-lg  my-5 shadow-md"
+                                      >
+                                        <Link to={val.link}>
+                                          <img
+                                            src={val.img}
+                                            alt=""
+                                            className=""
+                                          />
+                                          <h1 className="text-2xl font-bold py-1">
+                                            {val.title}
+                                          </h1>
+                                          <p className="py-1">{val.desc}</p>
+
+                                          <Link to={"/BME/giftcardinnerpage"}>
+                                            <button
+                                              type=""
+                                              className="bg-themecolor1 w-full py-2 text-white font-bold mt-2"
+                                            >
+                                              Book
+                                            </button>
+                                          </Link>
+                                        </Link>
                                       </div>
                                     );
                                   })}
@@ -253,18 +322,36 @@ function GiftCards() {
                             {/* =========================================== Occasion ========================================*/}
                             <div
                               className={openTab1 === 3 ? "block" : "hidden"}
-                              id="link2"
+                              id="link3"
                             >
                               <div className="container mx-auto">
                                 <div className="grid grid-cols-1 md:grid-cols-4  px-11">
                                   {occasiondata.map((val, index) => {
                                     return (
-                                      <div key={index}>
-                                        <img
-                                          src={val.img}
-                                          alt=""
-                                          className="px-2 my-5"
-                                        />
+                                      <div
+                                        key={index}
+                                        className="mx-2 p-3 rounded-lg  my-5 shadow-md"
+                                      >
+                                        <Link to={val.link}>
+                                          <img
+                                            src={val.img}
+                                            alt=""
+                                            className=""
+                                          />
+                                          <h1 className="text-2xl font-bold py-1">
+                                            {val.title}
+                                          </h1>
+                                          <p className="py-1">{val.desc}</p>
+
+                                          <Link to={"/BME/giftcardinnerpage"}>
+                                            <button
+                                              type=""
+                                              className="bg-themecolor1 w-full py-2 text-white font-bold mt-2"
+                                            >
+                                              Book
+                                            </button>
+                                          </Link>
+                                        </Link>
                                       </div>
                                     );
                                   })}
@@ -272,11 +359,11 @@ function GiftCards() {
                               </div>
                             </div>
 
-                            {/* =========================================== combos ========================================*/}
+                            {/* =========================================== combos ========================================
 
                             <div
                               className={openTab1 === 4 ? "block" : "hidden"}
-                              id="link2"
+                              id="link4"
                             >
                               <div className="container mx-auto">
                                 <div className="grid grid-cols-1 md:grid-cols-4 pl-3 pr-5">
@@ -324,7 +411,7 @@ function GiftCards() {
                                   })}
                                 </div>
                               </div>
-                            </div>
+                            </div>*/}
                           </div>
                         </div>
                       </div>
@@ -338,6 +425,6 @@ function GiftCards() {
       </div>
     </div>
   );
-}
+};
 
 export default GiftCards;

@@ -4,9 +4,11 @@ import { IoLocationSharp } from "react-icons/io5";
 import { healty, youlisting } from "../API";
 import profile from "../../Images/user.png";
 import orderimage from "../../Images/events1.png";
+import TICKET from "../../Images/ticketqr.png";
 import { Link } from "react-router-dom";
 import {
   FaCalendar,
+  FaChevronDown,
   FaDownload,
   FaEdit,
   FaEye,
@@ -15,14 +17,64 @@ import {
   FaLocationArrow,
   FaVideo,
 } from "react-icons/fa";
+import { RxCross2 } from "react-icons/rx";
 
-function EditProfile() {
+const EditProfile = () => {
   const [openTab, setOpenTab] = React.useState(1);
   const [showhide1, setShowhide1] = React.useState("");
   const handleshow1 = (e) => {
     const getshow1 = e.target.value;
     setShowhide1(getshow1);
   };
+
+  const [ticketpopup, setticket] = useState(false);
+  const handleProfileClick = () => {
+    setticket(true);
+  };
+
+  // ---------------------------addticket--------------------------
+  const [tickets, setTickets] = useState([
+    { id: 1, name: "Ticket 1", price: "10", Qty: "1000" },
+    { id: 2, name: "Ticket 2", price: "20", Qty: "1000" },
+    { id: 3, name: "Ticket 3", price: "30", Qty: "1000" },
+  ]);
+  const [newTicket, setNewTicket] = useState({ name: "", price: "", Qty: "" });
+  const [editingTicket, setEditingTicket] = useState(null);
+
+  const handleAddTicket = (e) => {
+    e.preventDefault();
+    setTickets([...tickets, newTicket]);
+    setNewTicket({ name: "", price: "", Qty: "" });
+  };
+
+  const handleEdit = (id, e) => {
+    e.preventDefault(e.id);
+    setEditingTicket(id);
+  };
+
+  const handleSaveEdit = (id, updatedTicket, e) => {
+    const updatedTickets = tickets.map((ticket) =>
+      ticket.id === id ? { ...ticket, ...updatedTicket } : ticket
+    );
+    e.preventDefault(id);
+    setTickets(updatedTickets);
+    setEditingTicket(null);
+  };
+
+  const handleDelete = (id) => {
+    const updatedTickets = tickets.filter((ticket) => ticket.id !== id);
+    setTickets(updatedTickets);
+  };
+
+  const [showMenu, setShowMenu] = useState({});
+
+  const handleMenuToggle = (itemId) => {
+    setShowMenu((prev) => ({
+      ...prev,
+      [itemId]: !prev[itemId],
+    }));
+  };
+
   return (
     <div>
       <div className="w-full container mx-auto">
@@ -88,7 +140,7 @@ function EditProfile() {
                 href="#link4"
                 role="tablist"
               >
-                Your Orders
+                Your Booking
               </a>
             </li>
 
@@ -349,7 +401,10 @@ function EditProfile() {
                             </span>
                             | Enjoy the show
                           </p>
-                          <FaEye className="absolute right-2 top-2 text-2xl" />
+                          <FaEye
+                            className="absolute right-2 top-2 text-2xl cursor-pointer"
+                            onClick={handleProfileClick}
+                          />
                         </div>
                       </div>
                     </div>
@@ -362,7 +417,7 @@ function EditProfile() {
                     <h1 className="text-lg  p-2 font-bold pt-0">
                       Your Listing
                     </h1>
-                    <div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 gap-5 ">
+                    {/* <div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 gap-5 ">
                       {youlisting.map((val, index) => {
                         return (
                           <div
@@ -404,30 +459,128 @@ function EditProfile() {
                                 Delete
                               </Link>
                             </div>
+                            <Link to={"/BME/bookingview"} className="">
+                              <button className=" bg-themecolor1 w-full text-center rounded-md text-white font-semibold py-2 px-5">
+                                View Booking
+                              </button>
+                            </Link>
                           </div>
                         );
                       })}
+                    </div>*/}
+
+                    <div class="relative overflow-x-auto">
+                      <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 border-collapse border border-slate-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                          <tr className="border-b-2 border-slate-400">
+                            <th
+                              scope="col"
+                              class="px-6 py-3 border-collapse border border-slate-400"
+                            >
+                              Name
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-6 py-3 border-collapse border border-slate-400"
+                            >
+                              Image
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-6 py-3 border-collapse border border-slate-400"
+                            >
+                              Status
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-6 py-3 border-collapse border border-slate-400"
+                            >
+                              Action
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {youlisting.map((val) => {
+                            return (
+                              <tr class=" border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 border-slate-300">
+                                <th
+                                  scope="row"
+                                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white border-collapse border border-slate-400"
+                                >
+                                  {val.title}
+                                </th>
+                                <td class="px-6 py-4 border-collapse border border-slate-400">
+                                  <img
+                                    src={val.img}
+                                    alt=""
+                                    className="h-40 w-32"
+                                  />
+                                </td>
+                                <td class="px-6 py-4 border-collapse border border-slate-400">
+                                  <span className="badge bg-green-400 text-white px-2 ">
+                                    Active
+                                  </span>
+                                </td>
+                                <td className="    px-4 py-2">
+                                  <div key={val.Id} className="relative">
+                                    <button
+                                      className="bg-themecolor1 text-white px-4 py-2 rounded-md   flex items-center"
+                                      onClick={() => handleMenuToggle(val.Id)}
+                                    >
+                                      Action <FaChevronDown className="ml-4" />
+                                    </button>
+                                    {showMenu[val.Id] && (
+                                      <div className="absolute z-50 mt-2 w-36 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                                        <div className="py-1">
+                                          <button className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left">
+                                            View Event
+                                          </button>
+                                          <button className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left">
+                                            Edit
+                                          </button>
+                                          <Link
+                                            to={"/BME/bookingview"}
+                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                                          >
+                                            View Booking
+                                          </Link>
+                                          <Link
+                                            to={"/BME/ticket"}
+                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                                          >
+                                            Add Address
+                                          </Link>
+                                        </div>
+                                      </div>
+                                    )}
+                                  </div>
+                                </td>
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
                 {/*================= Tab 6 ==================*/}
                 <div className={openTab === 6 ? "block " : "hidden"} id="link6">
                   <div className="bg-white border p-5">
-                    <h1 className="text-lg  p-2 font-bold pt-0">List Show</h1>
+                    <h1 className="text-lg  font-bold pt-0">List Show</h1>
 
                     <form action="">
                       <div className="container mx-auto ">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           <div className="">
                             <h1>
-                              Name <span className="text-red-600">*</span>
+                              Event Name <span className="text-red-600">*</span>
                             </h1>
                             <input
                               type="text"
                               name=""
                               id=""
                               className="w-full border rounded-sm p-2 outline-none"
-                              placeholder="Name"
+                              placeholder="Event Name"
                             />
                           </div>
                           <div className="">
@@ -506,7 +659,7 @@ function EditProfile() {
                                 <FaLocationArrow />
                               </h1>
                               <h2 className="mt-12 my-3 text-center font-semibold text-lg">
-                                On Ground Evnet
+                                On Ground Event{" "}
                               </h2>
                               <h1 className="text-sm text-center text-gray-500">
                                 TIcket, market and manges entries to safe events
@@ -516,42 +669,8 @@ function EditProfile() {
                           </div>
                         </div>
 
-                        {/* ===========Create an event============= */}
-                        <div className="">
-                          <h1 className="text-2xl text-center font-semibold py-2">
-                            Create an event
-                          </h1>
-
-                          <div class="flex items-center justify-center w-full">
-                            <label
-                              for="dropzone-file"
-                              class="flex flex-col items-center justify-center    w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-white"
-                            >
-                              <div class="flex flex-col items-center justify-center pt-5 pb-6">
-                                <h1 className="text-3xl text-gray-600">
-                                  <FaImage />
-                                </h1>
-                                <h1 className="text-center px-5 md:text-base font-semibold text-sm">
-                                  Add an image for your event
-                                </h1>
-                                <h1 className="text-center px-5 md:text-sm text-gray-500 text-sm py-2">
-                                  (Recommended size - 840 X 460 px)
-                                </h1>
-                                <h1 className="text-[#EC5E71] font-semibold rounded-md ">
-                                  Upload Image
-                                </h1>
-                              </div>
-                              <input
-                                id="dropzone-file"
-                                type="file"
-                                class="hidden"
-                              />
-                            </label>
-                          </div>
-                        </div>
-
                         <h1 className="font-semibold py-2">
-                          Evnet Description
+                          Event Description
                         </h1>
                         <textarea
                           name=""
@@ -561,54 +680,59 @@ function EditProfile() {
                         ></textarea>
 
                         {/* =========Add Images and Add Videos =================*/}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <div className="py-3">
-                            <h1 className=" text-xl font-semibold">
-                              Add Images
-                            </h1>
-                            <p className="text-sm text-gray-500 pb-2">
-                              (.jpg, .jpeg, .png, .pdf)
-                            </p>
-                            <div className="border-2 border-dotted border-gray-600 rounded-md text-center pt-7 py-4 cursor-pointer">
-                              <h1 className="text-3xl">
-                                <FaImage className="block m-auto" />
+                        <div className="mt-4">
+                          <h1 className="text-lg p-2 py-1  text-white font-bold bg-themecolor1">
+                            Image Section
+                          </h1>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="py-3">
+                              <h1 className=" text-base font-semibold">
+                                Add Banner Image
                               </h1>
-                              <h1 className="lg:text-lg px-4 lg:px-0 text-gray-600">
-                                Select File here (1MB File Size Limit)
-                              </h1>
-                              <input
-                                type="file"
-                                class="block w-56 lg:w-80 text-sm text-slate-500 m-auto my-5 border border-[#F84464] bg-[#f7f7f7] rounded-lg
-                  file:mr-4 file:py-3 file:px-4
-                  file:border-0 file:text-sm file:font-semibold
-                  file:bg-[#EC5E71] file:text-white
-                  cursor-pointer"
-                              />
+                              <p className="text-sm text-gray-500 pb-2">
+                                (.jpg, .jpeg, .png, .pdf)
+                              </p>
+                              <div className="border-2 border-dotted border-gray-600 rounded-md text-center pt-7 py-4 cursor-pointer">
+                                <h1 className="text-3xl">
+                                  <FaImage className="block m-auto" />
+                                </h1>
+                                <h1 className="lg:text-lg px-4 lg:px-0 text-gray-600">
+                                  Select File here (below 1 MB)
+                                </h1>
+                                <input
+                                  type="file"
+                                  class="block w-56 lg:w-80 text-sm text-slate-500 m-auto my-5 border border-[#F84464] bg-[#f7f7f7] rounded-lg
+               file:mr-4 file:py-3 file:px-4
+               file:border-0 file:text-sm file:font-semibold
+               file:bg-[#EC5E71] file:text-white
+               cursor-pointer"
+                                />
+                              </div>
                             </div>
-                          </div>
 
-                          <div className="py-3">
-                            <h1 className=" text-xl font-semibold">
-                              Add Videos
-                            </h1>
-                            <p className="text-sm text-gray-500 pb-2">
-                              (.mp4, .mp3)
-                            </p>
-                            <div className="border-2 border-dotted border-gray-600 rounded-md text-center pt-7 py-4 cursor-pointer">
-                              <h1 className="text-3xl">
-                                <FaVideo className="block m-auto" />
+                            <div className="py-3">
+                              <h1 className=" text-base font-semibold">
+                                Add Thumb Image
                               </h1>
-                              <h1 className="lg:text-lg px-4 lg:px-0 text-gray-600">
-                                Select File here (2MB File Size Limit)
-                              </h1>
-                              <input
-                                type="file"
-                                class="block m-auto w-56 lg:w-80 text-sm text-slate-500 my-5 border border-[#F84464] bg-[#f7f7f7] rounded-lg
-                  file:mr-4 file:py-3 file:px-4
-                  file:border-0 file:text-sm file:font-semibold
-                  file:bg-[#EC5E71] file:text-white
-                  cursor-pointer"
-                              />
+                              <p className="text-sm text-gray-500 pb-2">
+                                (.jpg, .jpeg, .png, .pdf)
+                              </p>
+                              <div className="border-2 border-dotted border-gray-600 rounded-md text-center pt-7 py-4 cursor-pointer">
+                                <h1 className="text-3xl">
+                                  <FaImage className="block m-auto" />
+                                </h1>
+                                <h1 className="lg:text-lg px-4 lg:px-0 text-gray-600">
+                                  Select File here (below 1 MB)
+                                </h1>
+                                <input
+                                  type="file"
+                                  class="block m-auto w-56 lg:w-80 text-sm text-slate-500 my-5 border border-[#F84464] bg-[#f7f7f7] rounded-lg
+               file:mr-4 file:py-3 file:px-4
+               file:border-0 file:text-sm file:font-semibold
+               file:bg-[#EC5E71] file:text-white
+               cursor-pointer"
+                                />
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -616,7 +740,7 @@ function EditProfile() {
                         <div className="grid grid-cols-1 md:grid-cols-2  gap-4">
                           <div className="">
                             <h1 className="font-semibold py-2">
-                              Evnet Start Time
+                              Event Start Time
                             </h1>
                             <input
                               type="datetime-local"
@@ -627,7 +751,7 @@ function EditProfile() {
                           </div>
                           <div className="">
                             <h1 className="font-semibold py-2">
-                              Evnet End Time
+                              Event End Time
                             </h1>
                             <input
                               type="datetime-local"
@@ -636,158 +760,77 @@ function EditProfile() {
                               className="border w-full p-2 rounded-sm"
                             />
                           </div>
-
                           <div className="">
-                            <h1 className="font-semibold py-2">City</h1>
+                            <h1 className="font-semibold py-2">
+                              Select Main Category
+                            </h1>
                             <select
-                              id="city"
-                              name="city"
+                              id="Language"
+                              name="Language"
                               class="form-select"
                               className="border w-full p-2 rounded-sm"
                             >
-                              <option value="">Select City</option>
-                              <option value="Abrama">Abrama</option>
-                              <option value="Adalaj">Adalaj</option>
-                              <option value="Ahmedabad">Ahmedabad</option>
-                              <option value="Ahwa">Ahwa</option>
-                              <option value="Amod">Amod</option>
-                              <option value="Amreli">Amreli</option>
-                              <option value="Amroli">Amroli</option>
-                              <option value="Anand">Anand</option>
-                              <option value="Anjar">Anjar</option>
-                              <option value="Ankleshwar">Ankleshwar</option>
-                              <option value="Babra">Babra</option>
-                              <option value="Bagasara">Bagasara</option>
-                              <option value="Bagasra">Bagasra</option>
+                              <option value="">Select Main Category</option>
+                              <option value="Cat1">Cat1</option>
+                              <option value="Cat2">Cat2</option>
                             </select>
                           </div>
-                          {/* ===================Yes OR No =========================*/}
                           <div className="">
                             <h1 className="font-semibold py-2">
-                              Is Venue Decided?
+                              Select Sub Category
                             </h1>
-                            <div className="col-md-12 mt-3">
-                              <div className="text-black">
-                                <form action="">
-                                  <input
-                                    type="radio"
-                                    name="userdetail"
-                                    value="yes"
-                                    onClick={handleshow1}
-                                    className="text-gray-600"
-                                  />
-                                  <label htmlFor="" className="px-2">
-                                    Yes
-                                  </label>
-
-                                  <input
-                                    type="radio"
-                                    name="userdetail"
-                                    value="no"
-                                    checked={showhide1 === "no"}
-                                    onClick={handleshow1}
-                                    className=""
-                                  />
-                                  <label htmlFor="" className="px-2">
-                                    No
-                                  </label>
-                                </form>
-                              </div>
-                              {showhide1 === "yes" && (
-                                <input
-                                  type="text"
-                                  name=""
-                                  id=""
-                                  placeholder="Enter Location"
-                                  className="border w-full p-2 mt-3 rounded-sm"
-                                />
-                              )}
-                            </div>
-                          </div>
-
-                          <div className="">
-                            <h1 className="font-semibold py-2">Organiser</h1>
-                            <input
-                              type="text"
-                              name=""
-                              id=""
+                            <select
+                              id="Language"
+                              name="Language"
+                              class="form-select"
                               className="border w-full p-2 rounded-sm"
-                              placeholder="Your event's Organiser"
-                            />
-                          </div>
-
-                          <div className="">
-                            <h1 className="font-semibold py-2">Group</h1>
-                            <input
-                              type="text"
-                              name=""
-                              id=""
-                              className="border w-full p-2 rounded-sm"
-                              placeholder=""
-                            />
-                          </div>
-
-                          <div className="">
-                            <h1 className="font-semibold py-2">
-                              GSTIN(Optional)
-                            </h1>
-                            <input
-                              type="text"
-                              name=""
-                              id=""
-                              className="border w-full p-2 rounded-sm"
-                              placeholder="Your GSTIN"
-                            />
-                          </div>
-
-                          <div className="">
-                            <h1 className="font-semibold py-2">
-                              Category/Genre
-                            </h1>
-                            <input
-                              type="text"
-                              name=""
-                              id=""
-                              className="border w-full p-2 rounded-sm"
-                              placeholder="Your GSTIN"
-                            />
+                            >
+                              <option value="">Select Sub Category</option>
+                              <option value="Cat1">Cat1</option>
+                              <option value="Cat2">Cat2</option>
+                            </select>
                           </div>
                         </div>
 
-                        <h1 className="font-semibold py-2">Point Of Contrat</h1>
-                        <p className="text-sm">
-                          Details of the person managing the event from your
-                          end, it could be your or someone on your team. In case
-                          we need to get in touch, we know how to reach you.
-                        </p>
-                        {/*=================== Details =========*/}
-                        <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-10 gap-4 my-2">
-                          <div className="">
-                            <input
-                              type="text"
-                              name=""
-                              id=""
-                              placeholder="Name"
-                              className="w-full border outline-none p-2 rounded-sm"
-                            />
-                          </div>
-                          <div className="">
-                            <input
-                              type="email"
-                              name=""
-                              id=""
-                              placeholder="Email"
-                              className="w-full border outline-none p-2 rounded-sm"
-                            />
-                          </div>
-                          <div className="">
-                            <input
-                              type="text"
-                              name=""
-                              id=""
-                              placeholder="Phone"
-                              className="w-full border outline-none p-2 rounded-sm"
-                            />
+                        <div className="my-5">
+                          <h1 className="text-lg p-2 py-1  text-white font-bold bg-themecolor1">
+                            Point Of Contact
+                          </h1>
+                          <p className="text-sm mt-2">
+                            Details of the person managing the event from your
+                            end, it could be your or someone on your team. In
+                            case we need to get in touch, we know how to reach
+                            you.
+                          </p>
+                          {/*=================== Details =========*/}
+                          <div className="grid grid-cols-1 md:grid-cols-3  gap-4 my-2">
+                            <div className="">
+                              <input
+                                type="text"
+                                name=""
+                                id=""
+                                placeholder="Name"
+                                className="w-full border outline-none p-2 rounded-sm"
+                              />
+                            </div>
+                            <div className="">
+                              <input
+                                type="email"
+                                name=""
+                                id=""
+                                placeholder="Email"
+                                className="w-full border outline-none p-2 rounded-sm"
+                              />
+                            </div>
+                            <div className="">
+                              <input
+                                type="text"
+                                name=""
+                                id=""
+                                placeholder="Phone"
+                                className="w-full border outline-none p-2 rounded-sm"
+                              />
+                            </div>
                           </div>
                         </div>
 
@@ -967,8 +1010,75 @@ function EditProfile() {
           </div>
         </div>
       </div>
+
+      {ticketpopup ? (
+        <div>
+          <div className="justify-center items-center flex overflow-x-hidden overflow-y-hidden fixed inset-0 z-50 outline-none focus:outline-none">
+            <div className="relative  my-6 mx-auto w-96">
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                <div className="flex items-start  justify-between p-2 border-b border-solid border-blueGray-200 rounded-t">
+                  <h3 className="text-xl  block font-semibold">Ticket</h3>
+                  <button
+                    className="text-themecolor1 background-transparent font-bold uppercase  text-3xl outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                    onClick={() => setticket(false)}
+                  >
+                    <RxCross2 />
+                  </button>
+                </div>
+                <div className="  p-3 mt-2  relative">
+                  <div className="grid grid-cols-5">
+                    <div className="col-span-1">
+                      <img src={orderimage} alt="" />
+                    </div>
+                    <div className="col-span-4 ml-3">
+                      <p className="font-bold">Kirtidan gadhvi</p>
+                      <p className="flex items-center font-bold">
+                        <FaCalendar />
+                        12-12-1212
+                      </p>
+                      <p>
+                        <b>Venue: </b>Location Name
+                      </p>
+                      <p>
+                        <b>1</b> Ticket
+                      </p>
+                    </div>
+                  </div>
+                  <p className="pt-2">
+                    <span className="bg-green-500 text-white text-sm p-0.5 px-3   rounded mr-2">
+                      CONFIRMED
+                    </span>
+                    | Enjoy the show
+                  </p>
+                </div>
+
+                <div className="border-t-2 border-black p-3 flex items-center">
+                  <img src={TICKET} alt="" className="w-32" />
+                  <div className="mx-auto">
+                    <p className="text-center">
+                      <b>BOOKING ID: </b> <br></br>123123123
+                    </p>
+                  </div>
+                </div>
+                <div className="border-t-2 border-black p-3 flex items-center">
+                  <p className="text-center mx-auto">
+                    Cancellation not available for this venue
+                  </p>
+                </div>
+                <div className="border-t-2 border-black p-3 flex items-center font-bold">
+                  <p>Total Amount</p>
+
+                  <p className="ml-auto">Rs. 1041.06</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="opacity-50 fixed inset-0 z-40 bg-black"></div>
+        </div>
+      ) : null}
     </div>
   );
-}
+};
 
 export default EditProfile;

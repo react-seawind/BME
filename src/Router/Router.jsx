@@ -23,8 +23,10 @@ import Kyc3 from "../Components/Pages/Kyc3";
 import Artistdetail from "../Components/Pages/Artistdetail";
 import Artist from "../Components/Pages/Artist";
 import TEST from "../Components/Pages/Test";
+import Bookingview from "../Components/Pages/Bookingview";
+import Ticket from "../Components/Pages/Ticket";
 
-function Router() {
+const Router = () => {
   return (
     <Routes>
       <Route path="/BME" element={<Home />} />
@@ -54,9 +56,12 @@ function Router() {
       <Route path="/BME/artistdetail" element={<Artistdetail />} />
       <Route path="/BME/artist" element={<Artist />} />
 
+      <Route path="/BME/bookingview" element={<Bookingview />} />
+
+      <Route path="/BME/ticket" element={<Ticket />} />
       <Route path="/BME/test" element={<TEST />} />
     </Routes>
   );
-}
+};
 
 export default Router;

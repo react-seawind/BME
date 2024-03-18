@@ -1,14 +1,35 @@
 import React from "react";
+import GiftCardImg from "../../Images/giftcard.png";
 
-function GiftCardInnerPage() {
+const GiftCardInnerPage = () => {
   return (
-    <div className="bg-gray-100">
+    <div className="=">
       <div className="  relative  container mx-auto w-full">
-        <div className="grid grid-cols-1  ">
+        <div className="grid grid-cols-1 bg-white shadow-lg  p-5 my-5 border-2">
+          <div className="grid grid-cols-3 gap-5">
+            <div className="col-span-1">
+              <img src={GiftCardImg} alt="" />
+            </div>
+            <div className="col-span-2 my-auto">
+              <h1 className="text-2xl font-bold py-1">Gift Title</h1>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </p>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </p>
+            </div>
+          </div>
           {/* =======================Form Part =======================================*/}
-          <div className="col-span-2 bg-white md:border py-5   lg:mb-10 md:mb-20">
+          <div className=" bg-white py-5   ">
             <form action="">
-              <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mx-3">
+              <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 ">
                 <div>
                   <label className="py-2">*From</label>
                   <input
@@ -84,6 +105,6 @@ function GiftCardInnerPage() {
       </div>
     </div>
   );
-}
+};
 
 export default GiftCardInnerPage;

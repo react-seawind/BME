@@ -37,14 +37,14 @@ const Offers = () => {
         <div className=" ">
           <div className="m-auto">
             <ul
-              className="container grid grid-cols-6 mb-0 list-none  flex-wrap pt-3 pb-4 flex-row ml-auto mr-auto"
+              className="container grid md:grid-cols-6 grid-cols-3 mb-0 list-none  flex-wrap pt-3 pb-4 flex-row ml-auto mr-auto"
               role="tablist"
             >
               {/* ===============================Credit Card ===================================*/}
               <li className="  justify-center   text-center">
                 <a
                   className={
-                    "text-xs font-semibold hover:text-[#EB4E62] text-center px-0 py-3 rounded block m-auto leading-normal "
+                    "text-xs font-semibold hover:text-themecolor1 text-center px-0 py-3 rounded block m-auto leading-normal "
                   }
                   onClick={(e) => {
                     e.preventDefault();
@@ -54,7 +54,7 @@ const Offers = () => {
                   href="#link1"
                   role="tablist"
                 >
-                  <CiCreditCard1 className="block m-auto text-6xl border text-gray-500 py-3 rounded-lg border-gray-300 hover:text-white hover:border-0 hover:bg-[#EB4E62] mb-2" />
+                  <CiCreditCard1 className="block m-auto text-6xl border py-3 mb-2 rounded-lg border-gray-300 text-white bg-themecolor1" />
                   Credit Card
                 </a>
               </li>
@@ -64,7 +64,7 @@ const Offers = () => {
               <li className="text-center">
                 <a
                   className={
-                    "text-xs font-semibold text-black bg-white hover:text-[#EB4E62] px-0 py-3 rounded block m-auto leading-normal "
+                    "text-xs font-semibold text-black bg-white hover:text-themecolor1 px-0 py-3 rounded block m-auto leading-normal "
                   }
                   onClick={(e) => {
                     e.preventDefault();
@@ -74,7 +74,7 @@ const Offers = () => {
                   href="#link2"
                   role="tablist"
                 >
-                  <CiCreditCard1 className="blocl m-auto text-6xl border text-gray-500 py-3 mb-2 rounded-lg border-gray-300 hover:text-white hover:border-0 hover:bg-[#EB4E62]" />
+                  <CiCreditCard1 className="blocl m-auto text-6xl border py-3 mb-2 rounded-lg border-gray-300 text-white bg-themecolor1" />
                   Debit Card
                 </a>
               </li>
@@ -83,7 +83,7 @@ const Offers = () => {
               <li className="text-center">
                 <a
                   className={
-                    "text-xs font-semibold text-black bg-white hover:text-[#EB4E62] px-0 py-3 rounded block leading-normal "
+                    "text-xs font-semibold text-black bg-white hover:text-themecolor1 px-0 py-3 rounded block leading-normal "
                   }
                   onClick={(e) => {
                     e.preventDefault();
@@ -93,7 +93,7 @@ const Offers = () => {
                   href="#link2"
                   role="tablist"
                 >
-                  <IoTicketOutline className="blocl m-auto text-6xl border text-gray-500 py-3 mb-2 rounded-lg border-gray-300 hover:text-white hover:border-0 hover:bg-[#EB4E62]" />
+                  <IoTicketOutline className="blocl m-auto text-6xl border py-3 mb-2 rounded-lg border-gray-300 text-white bg-themecolor1" />
                   BookMyEvent
                 </a>
               </li>
@@ -103,7 +103,7 @@ const Offers = () => {
               <li className="text-center">
                 <a
                   className={
-                    "text-xs font-semibold text-black bg-white hover:text-[#EB4E62] px-0 py-3 rounded block leading-normal "
+                    "text-xs font-semibold text-black bg-white hover:text-themecolor1 px-0 py-3 rounded block leading-normal "
                   }
                   onClick={(e) => {
                     e.preventDefault();
@@ -113,7 +113,7 @@ const Offers = () => {
                   href="#link2"
                   role="tablist"
                 >
-                  <IoWalletOutline className="blocl m-auto text-6xl border text-gray-500 py-3 mb-2 rounded-lg border-gray-300 hover:text-white hover:border-0 hover:bg-[#EB4E62]" />
+                  <IoWalletOutline className="blocl m-auto text-6xl border py-3 mb-2 rounded-lg border-gray-300 text-white bg-themecolor1" />
                   Wallet
                 </a>
               </li>
@@ -122,7 +122,7 @@ const Offers = () => {
               <li className="text-center">
                 <a
                   className={
-                    "text-xs font-semibold text-black bg-white hover:text-[#EB4E62] px-0 py-3 rounded block leading-normal "
+                    "text-xs font-semibold text-black bg-white hover:text-themecolor1 px-0 py-3 rounded block leading-normal "
                   }
                   onClick={(e) => {
                     e.preventDefault();
@@ -132,7 +132,7 @@ const Offers = () => {
                   href="#link2"
                   role="tablist"
                 >
-                  <GoTrophy className="blocl m-auto text-6xl border text-gray-500 py-3 mb-2 rounded-lg border-gray-300 hover:text-white hover:border-0 hover:bg-[#EB4E62]" />
+                  <GoTrophy className="blocl m-auto text-6xl border py-3 mb-2 rounded-lg border-gray-300 text-white bg-themecolor1" />
                   Rewards
                 </a>
               </li>
@@ -142,7 +142,7 @@ const Offers = () => {
               <li className="text-center">
                 <a
                   className={
-                    "text-xs font-semibold text-black bg-white hover:text-[#EB4E62] px-0 py-3 rounded block leading-normal "
+                    "text-xs font-semibold text-black bg-white hover:text-themecolor1 px-0 py-3 rounded block leading-normal "
                   }
                   onClick={(e) => {
                     e.preventDefault();
@@ -152,7 +152,7 @@ const Offers = () => {
                   href="#link2"
                   role="tablist"
                 >
-                  <FaGooglePay className="blocl m-auto text-6xl border text-gray-500 py-3 mb-2 rounded-lg border-gray-300 hover:text-white hover:border-0 hover:bg-[#EB4E62]" />
+                  <FaGooglePay className="blocl m-auto text-6xl border py-3 mb-2 rounded-lg border-gray-300 text-white bg-themecolor1" />
                   Pay Later
                 </a>
               </li>
@@ -182,17 +182,19 @@ const Offers = () => {
                                     alt="Avatar"
                                     className="image w-full block md:h-72 h-48 rounded-sm"
                                   />
-                                  <img
-                                    src={val.bankimg}
-                                    alt=""
-                                    className="rounded-full w-14 -mt-[28px] ml-4 absolute z-10"
-                                  />
-                                  <h1 className="text-sm text-center py-8">
-                                    {val.tittle}
-                                  </h1>
-                                  <p className="text-sm text-center pb-5">
-                                    {val.des}
-                                  </p>
+                                  <div className="relative">
+                                    <img
+                                      src={val.bankimg}
+                                      alt=""
+                                      className="rounded-full w-14 -top-6 left-4 absolute z-10"
+                                    />
+                                    <h1 className="text-sm text-center py-8">
+                                      {val.tittle}
+                                    </h1>
+                                    <p className="text-sm text-center pb-5">
+                                      {val.des}
+                                    </p>
+                                  </div>
 
                                   <div className="overlay absolute md:h-72 h-48 w-full inset-x-0 inset-y-0 opacity-0 rounded-sm">
                                     <h1 className="text absolute top-[9%] border-y md:py-4 py-2 left-[50%] text-center text-sm font-bold text-white w-full">
@@ -231,20 +233,22 @@ const Offers = () => {
                                     alt="Avatar"
                                     className="image w-full block md:h-72 h-48 rounded-sm"
                                   />
-                                  <img
-                                    src={val.bankimg}
-                                    alt=""
-                                    className="rounded-full w-14 -mt-[28px] ml-4 absolute z-10"
-                                  />
-                                  <h1 className="text-sm text-center py-8">
-                                    {val.tittle}
-                                  </h1>
-                                  <p className="text-sm text-center pb-5 text-gray-500">
-                                    Valid till
-                                    <span className="text-black">
-                                      {val.des}
-                                    </span>
-                                  </p>
+                                  <div className="relative">
+                                    <img
+                                      src={val.bankimg}
+                                      alt=""
+                                      className="rounded-full w-14 -top-6 left-4 absolute z-10"
+                                    />
+                                    <h1 className="text-sm text-center py-8">
+                                      {val.tittle}
+                                    </h1>
+                                    <p className="text-sm text-center pb-5 text-gray-500">
+                                      Valid till
+                                      <span className="text-black">
+                                        {val.des}
+                                      </span>
+                                    </p>
+                                  </div>
 
                                   <div className="overlay absolute md:h-72 h-48 w-full inset-x-0 inset-y-0 opacity-0 rounded-sm">
                                     <h1 className="text absolute top-[9%] border-y py-4 left-[50%] text-center text-sm font-bold text-white w-full">
@@ -283,20 +287,22 @@ const Offers = () => {
                                     alt="Avatar"
                                     className="image w-full block md:h-72 h-48 rounded-sm"
                                   />
-                                  <img
-                                    src={val.bankimg}
-                                    alt=""
-                                    className="rounded-full bg-white w-14 -mt-[28px] ml-4 absolute z-10"
-                                  />
-                                  <h1 className="text-sm text-center py-8">
-                                    {val.tittle}
-                                  </h1>
-                                  <p className="text-sm text-center pb-5 text-gray-500">
-                                    Valid till
-                                    <span className="text-black">
-                                      {val.des}
-                                    </span>
-                                  </p>
+                                  <div className="relative">
+                                    <img
+                                      src={val.bankimg}
+                                      alt=""
+                                      className="rounded-full w-14 -top-6 left-4 absolute z-10"
+                                    />
+                                    <h1 className="text-sm text-center py-8">
+                                      {val.tittle}
+                                    </h1>
+                                    <p className="text-sm text-center pb-5 text-gray-500">
+                                      Valid till
+                                      <span className="text-black">
+                                        {val.des}
+                                      </span>
+                                    </p>
+                                  </div>
 
                                   <div className="overlay absolute md:h-72 h-48 w-full inset-x-0 inset-y-0 opacity-0 rounded-sm">
                                     <h1 className="text absolute top-[9%] border-y py-4 left-[50%] text-center text-sm font-bold text-white w-full">
@@ -335,20 +341,22 @@ const Offers = () => {
                                     alt="Avatar"
                                     className="image w-full block md:h-72 h-48 rounded-sm"
                                   />
-                                  <img
-                                    src={val.bankimg}
-                                    alt=""
-                                    className="rounded-full bg-white w-14 -mt-[28px] ml-4 absolute z-10"
-                                  />
-                                  <h1 className="text-sm text-center py-8">
-                                    {val.tittle}
-                                  </h1>
-                                  <p className="text-sm text-center pb-5 text-gray-500">
-                                    Valid till
-                                    <span className="text-black">
-                                      {val.des}
-                                    </span>
-                                  </p>
+                                  <div className="relative">
+                                    <img
+                                      src={val.bankimg}
+                                      alt=""
+                                      className="rounded-full w-14 -top-6 left-4 absolute z-10"
+                                    />
+                                    <h1 className="text-sm text-center py-8">
+                                      {val.tittle}
+                                    </h1>
+                                    <p className="text-sm text-center pb-5 text-gray-500">
+                                      Valid till
+                                      <span className="text-black">
+                                        {val.des}
+                                      </span>
+                                    </p>
+                                  </div>
 
                                   <div className="overlay absolute md:h-72 h-48 w-full inset-x-0 inset-y-0 opacity-0 rounded-sm">
                                     <h1 className="text absolute top-[9%] border-y py-4 left-[50%] text-center text-sm font-bold text-white w-full">
@@ -387,20 +395,22 @@ const Offers = () => {
                                     alt="Avatar"
                                     className="image w-full block md:h-72 h-48 rounded-sm"
                                   />
-                                  <img
-                                    src={val.bankimg}
-                                    alt=""
-                                    className="rounded-full bg-white w-14 -mt-[28px] ml-4 absolute z-10"
-                                  />
-                                  <h1 className="text-sm text-center py-8">
-                                    {val.tittle}
-                                  </h1>
-                                  <p className="text-sm text-center pb-5 text-gray-500">
-                                    Valid till
-                                    <span className="text-black">
-                                      {val.des}
-                                    </span>
-                                  </p>
+                                  <div className="relative">
+                                    <img
+                                      src={val.bankimg}
+                                      alt=""
+                                      className="rounded-full w-14 -top-6 left-4 absolute z-10"
+                                    />
+                                    <h1 className="text-sm text-center py-8">
+                                      {val.tittle}
+                                    </h1>
+                                    <p className="text-sm text-center pb-5 text-gray-500">
+                                      Valid till
+                                      <span className="text-black">
+                                        {val.des}
+                                      </span>
+                                    </p>
+                                  </div>
 
                                   <div className="overlay absolute md:h-72 h-48 w-full inset-x-0 inset-y-0 opacity-0 rounded-sm">
                                     <h1 className="text absolute top-[9%] border-y py-4 left-[50%] text-center text-sm font-bold text-white w-full">
@@ -439,20 +449,22 @@ const Offers = () => {
                                     alt="Avatar"
                                     className="image w-full block md:h-72 h-48 rounded-sm"
                                   />
-                                  <img
-                                    src={val.bankimg}
-                                    alt=""
-                                    className="rounded-full bg-white w-14 -mt-[28px] ml-4 absolute z-10"
-                                  />
-                                  <h1 className="text-sm text-center py-8">
-                                    {val.tittle}
-                                  </h1>
-                                  <p className="text-sm text-center pb-5 text-gray-500">
-                                    Valid till
-                                    <span className="text-black">
-                                      {val.des}
-                                    </span>
-                                  </p>
+                                  <div className="relative">
+                                    <img
+                                      src={val.bankimg}
+                                      alt=""
+                                      className="rounded-full w-14 -top-6 left-4 absolute z-10"
+                                    />
+                                    <h1 className="text-sm text-center py-8">
+                                      {val.tittle}
+                                    </h1>
+                                    <p className="text-sm text-center pb-5 text-gray-500">
+                                      Valid till
+                                      <span className="text-black">
+                                        {val.des}
+                                      </span>
+                                    </p>
+                                  </div>
 
                                   <div className="overlay absolute md:h-72 h-48 w-full inset-x-0 inset-y-0 opacity-0 rounded-sm">
                                     <h1 className="text absolute top-[9%] border-y py-4 left-[50%] text-center text-sm font-bold text-white w-full">

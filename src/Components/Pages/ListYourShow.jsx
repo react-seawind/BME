@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { RxCross1 } from "react-icons/rx";
 import { hostdata, servicesofferdata } from "../API";
 
-export default function ListYourShow() {
+const ListYourShow = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   const handleItemClick = (item) => {
     setSelectedItem(item);
@@ -95,7 +95,7 @@ export default function ListYourShow() {
           {sliderdata.map((val) => {
             return (
               <div className="outline-none w-auto ">
-                <div className="grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 w-auto lg:mx-2 mx-4 my-4 bg-[#2B3148]">
+                <div className="grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 w-auto lg:mx-2 mx-4   bg-[#2B3148]">
                   <div className="p-3 md:py-4 my-auto mx-auto">
                     <h1 className="md:text-3xl text-center xl:text-left text-2xl font-bold text-white md:px-5 md:line-clamp-2 line-clamp-1">
                       {val.name}
@@ -376,4 +376,6 @@ export default function ListYourShow() {
       </p>
     </div>
   );
-}
+};
+
+export default ListYourShow;
