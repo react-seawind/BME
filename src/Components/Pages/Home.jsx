@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaFacebook, FaInstagram, FaPlayCircle } from "react-icons/fa";
 import Slider from "react-slick";
 import { FcCalendar } from "react-icons/fc";
@@ -21,7 +21,7 @@ import { Link } from "react-router-dom";
 import { CiCalendar, CiLocationOn } from "react-icons/ci";
 import { BiCategory } from "react-icons/bi";
 
-const Home =()=> {
+const Home = () => {
   const bannerS = {
     className: "center",
     centerMode: true,
@@ -32,6 +32,8 @@ const Home =()=> {
     autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,
+    prevArrow: null, // Disable the previous arrow
+    nextArrow: null, // Disable the next arrow
     responsive: [
       {
         breakpoint: 1024,
@@ -304,18 +306,22 @@ const Home =()=> {
     ],
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className=" ">
       {/*==================================Main slider ================================*/}
       <div className="Mainslider outline-none bg-gray-50">
-        <Slider {...bannerS}>
+        <Slider {...bannerS} className="main-banner">
           {HomeSLiderData.map((val, index) => {
             return (
               <div className="outline-none w-full" key={index}>
                 <img
                   src={val.image}
                   alt=""
-                  className="w-full h-40 md:h-96 lg:px-2 rounded-xl"
+                  className="w-full h-52 md:h-96 lg:h-[33rem] lg:px-2 "
                 />
               </div>
             );
@@ -345,7 +351,7 @@ const Home =()=> {
                     <img
                       src={val.img}
                       alt=""
-                      className=" rounded-xl h-32 w-full lg:h-48 md:h-40 block m-auto"
+                      className=" rounded-xl h-auto w-full  block m-auto"
                     />
                   </Link>
                 </div>
@@ -390,7 +396,7 @@ const Home =()=> {
                     <div className="rounded mx-2 p-2 bg-white">
                       <Link to={val.link}>
                         <img
-                          className="xl:h-96 lg:h-80 surface:h-80 rounded-md h-60 md:h-60 w-full"
+                          className="xl:h-80 lg:h-80 surface:h-72 rounded-md h-48 md:h-60 w-full"
                           src={val.img}
                           alt=""
                         />
@@ -438,7 +444,7 @@ const Home =()=> {
                     <div className="  overflow-hidden  mx-2 border p-2 rounded-md shadow-lg">
                       <Link to={val.link}>
                         <img
-                          className="xl:h-96 lg:h-80 surface:h-80 h-60 md:h-60 w-full rounded-md rounded-e-none rounded-l-none  "
+                          className="xl:h-80 lg:h-80 surface:h-72 rounded-md h-48 md:h-60 w-full rounded-e-none rounded-l-none  "
                           src={val.img}
                           alt=""
                         />
@@ -506,10 +512,10 @@ const Home =()=> {
                 <div>
                   <div key={index}>
                     <Link to={val.link}>
-                      <div className="overflow-hidden mx-2    rounded-md bg-white">
+                      <div className="overflow-hidden mx-2  p-2  rounded-md bg-white">
                         <div className="rounded-xl">
                           <img
-                            className="xl:h-96 lg:h-80 surface:h-80 rounded-md h-60 md:h-60 w-full rounded-e-none rounded-l-none  "
+                            className="xl:h-80 lg:h-80 surface:h-72 rounded-md h-48 md:h-60 w-full rounded-e-none rounded-l-none  "
                             src={val.img}
                             alt=""
                           />
@@ -583,38 +589,25 @@ const Home =()=> {
           <Slider {...music}>
             {musicdata.map((val, index) => {
               return (
-                <div key={index}>
-                  <div className=" mx-2 border p-2 rounded-md shadow-lg bg-white">
+                <div>
+                  <div key={index}>
                     <Link to={val.link}>
-                      <img
-                        className="xl:h-96 lg:h-80 surface:h-80 rounded-md h-60 md:h-60 w-full rounded-e-none rounded-l-none "
-                        src={val.img}
-                        alt=""
-                      />
-                      <div className="bottom-0 text-white w-full ">
-                        <p className="bg-themecolor1 p-2 line-clamp-1 leading-7">
-                          {val.tittle}
-                        </p>
-                      </div>
-                      <div className=" pt-3">
-                        <div className="flex md:text-sm text-xs font-semibold mb-2">
-                          <p className="md:text-xl text-sm mx-1">
-                            <FaLocationDot />
-                          </p>
-                          <h1 className="line-clamp-1">{val.des}</h1>
+                      <div className="overflow-hidden mx-2  p-2  rounded-md bg-white">
+                        <div className="rounded-xl">
+                          <img
+                            className="xl:h-80 lg:h-80 surface:h-72 rounded-md h-48 md:h-60 w-full rounded-e-none rounded-l-none  "
+                            src={val.img}
+                            alt=""
+                          />
                         </div>
-                      </div>
-                      <div className="flex text-sm font-semibold  bg-pink-100 rounded-md py-1 px-2">
-                        <h1 className=" my-auto">Free</h1>
-
-                        <button className="ml-auto">
-                          <Link
-                            to="/BME/steps1"
-                            className="text-base font-bold border-l-2 border-pink-300 pl-2 "
-                          >
-                            BUY NOW
-                          </Link>
-                        </button>
+                        <div className="px-2 py-4">
+                          <h1 className="md:font-bold font-semibold md:text-base text-sm line-clamp-1 ">
+                            {val.tittle}
+                          </h1>
+                          <p className="text-black md:text-sm text-xs line-clamp-1 ">
+                            {val.des}
+                          </p>
+                        </div>
                       </div>
                     </Link>
                   </div>
@@ -641,28 +634,50 @@ const Home =()=> {
           <Slider {...comedy}>
             {comedydata.map((val, index) => {
               return (
-                <div key={index}>
-                  <div className="  mx-2   border p-2 rounded-md shadow-lg bg-white">
-                    <Link to={val.link}>
-                      <img
-                        className="xl:h-96 lg:h-80 surface:h-80 rounded-md h-60 md:h-60 w-full rounded-e-none rounded-l-none  "
-                        src={val.img}
-                        alt=""
-                      />
-                      <div className="bottom-0 text-white w-full ">
-                        <p className="bg-themecolor1 p-2 line-clamp-1 leading-7">
-                          {val.tittle}
-                        </p>
-                      </div>
-                      <div className=" pt-3">
-                        <div className="flex md:text-sm text-xs font-semibold mb-2">
-                          <p className="md:text-xl text-sm mx-1">
-                            <FaLocationDot />
-                          </p>
-                          <h1 className="line-clamp-1">{val.des}</h1>
+                <div className="">
+                  <div key={index}>
+                    <div className="  overflow-hidden  mx-2 border p-2 rounded-md shadow-lg">
+                      <Link to={val.link}>
+                        <img
+                          className="xl:h-80 lg:h-80 surface:h-72 rounded-md h-48 md:h-60 w-full rounded-e-none rounded-l-none  "
+                          src={val.img}
+                          alt=""
+                        />
+                        <div className="bottom-0 text-white w-full ">
+                          <p className="bg-themecolor1 p-3">Event Name</p>
                         </div>
-                      </div>
-                    </Link>
+                        <div className=" pt-3">
+                          <div className="flex">
+                            <div className="flex md:text-sm text-xs font-semibold mb-2">
+                              <p className="md:text-xl text-sm mx-1">
+                                <FcCalendar />
+                              </p>
+                              <h1>{val.date}</h1>
+                            </div>
+
+                            <div className="flex md:text-sm text-xs font-semibold mb-2 ml-auto">
+                              <p className="md:text-xl text-sm mx-1">
+                                <FaCirclePlay />
+                              </p>
+                              <h1>{val.tittle2}</h1>
+                            </div>
+                          </div>
+
+                          <div className="flex text-sm font-semibold  bg-pink-100 rounded-md py-1 px-2">
+                            <h1 className=" my-auto">₹ {val.price}</h1>
+
+                            <button className="ml-auto">
+                              <Link
+                                to="/BME/steps1"
+                                className="text-base font-bold border-l-2 border-pink-300 pl-2 "
+                              >
+                                BUY NOW
+                              </Link>
+                            </button>
+                          </div>
+                        </div>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               );
@@ -802,6 +817,6 @@ const Home =()=> {
       </section>
     </div>
   );
-}
+};
 
 export default Home;

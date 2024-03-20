@@ -2,6 +2,7 @@ body {
   overflow-x: hidden;
 }
 
+/* 
 .slick-prev,
 .slick-next {
   width: 35px !important;
@@ -23,8 +24,48 @@ body {
 
 .slick-prev {
   left: 0px !important;
+} */
+
+/* .slick-prev:before {
+  content: 'f053' !important;
+} */
+
+/* CSS */
+.main-banner .slick-prev,
+.main-banner .slick-next {
+  display: none !important;
 }
 
+.slick-prev:before,
+.slick-next:before {
+  font-size: 0px !important;
+}
+
+.slick-next {
+  background: url(./Images/right-next.png) !important;
+  width: 45px !important;
+  height: 45px !important;
+  background-color: #fff !important;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+  background-size: 20px !important;
+  background-position: center !important;
+  z-index: 9;
+  background-repeat: no-repeat !important;
+}
+
+.slick-prev {
+  background: url(./Images/left-prev.png) !important;
+  width: 45px !important;
+  height: 45px !important;
+  background-color: #fff !important;
+  z-index: 9;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+  background-size: 20px !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
 
 .overlay {
   transition: .5s ease;
@@ -43,6 +84,39 @@ body {
 
 .bottomNavbar .active {
   color: #DC3548;
+}
+
+
+
+/* For Webkit-based browsers (e.g., Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 5px;
+  /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #DC3558;
+  /* Color of the thumb (dragging part) */
+  border-radius: 5px;
+  /* Rounded corners of the thumb */
+}
+
+
+
+/* For Firefox */
+/* Note: Firefox uses a different syntax for scrollbar customization */
+/* You may need to prefix these styles with -moz- for compatibility */
+/* It's important to check the current browser's requirements */
+
+/* Scrollbar track (background) */
+scrollbar {
+  width: 5px;
+}
+
+/* Scrollbar thumb (dragging part) */
+scrollbar-thumb {
+  background-color: #DC3558;
+  border-radius: 5px;
 }
 
 @media only screen and (max-width: 375px) {}

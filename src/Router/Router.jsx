@@ -12,7 +12,6 @@ import OfferInnerPage from "../Components/Pages/OfferInnerPage";
 import GiftCards from "../Components/Pages/GiftCards";
 import GiftCardInnerPage from "../Components/Pages/GiftCardInnerPage";
 import BookingSteps from "../Components/Pages/BookingSteps";
-import EditProfile from "../Components/Pages/EditProfile";
 import OTP from "../Components/DoItYourSelf/OTP";
 import About from "../Components/Pages/About";
 import Contact from "../Components/Pages/Contact";
@@ -22,9 +21,14 @@ import Kyc2 from "../Components/Pages/Kyc2";
 import Kyc3 from "../Components/Pages/Kyc3";
 import Artistdetail from "../Components/Pages/Artistdetail";
 import Artist from "../Components/Pages/Artist";
-import TEST from "../Components/Pages/Test";
 import Bookingview from "../Components/Pages/Bookingview";
 import Ticket from "../Components/Pages/Ticket";
+import Profile from "../Components/Pages/Profile";
+import Stream from "../Components/Pages/Stream";
+import YourBooking from "../Components/Pages/YourBooking";
+import YourListing from "../Components/Pages/YourListing";
+import ListShow from "../Components/Pages/ListShow";
+import Kyc from "../Components/Pages/Kyc";
 
 const Router = () => {
   return (
@@ -43,7 +47,6 @@ const Router = () => {
       <Route path="/BME/giftcard" element={<GiftCards />} />
       <Route path="/BME/giftcardinnerpage" element={<GiftCardInnerPage />} />
       <Route path="/BME/bookingsteps" element={<BookingSteps />} />
-      <Route path="/BME/editprofile" element={<EditProfile />} />
 
       <Route path="/BME/about" element={<About />} />
       <Route path="/BME/contact" element={<Contact />} />
@@ -59,7 +62,13 @@ const Router = () => {
       <Route path="/BME/bookingview" element={<Bookingview />} />
 
       <Route path="/BME/ticket" element={<Ticket />} />
-      <Route path="/BME/test" element={<TEST />} />
+
+      <Route path="/BME/profile" element={<Profile />} />
+      <Route path="/BME/stream" element={<Stream />} />
+      <Route path="/BME/your-booking" element={<YourBooking />} />
+      <Route path="/BME/your-listing" element={<YourListing />} />
+      <Route path="/BME/list-show" element={<ListShow />} />
+      <Route path="/BME/kyc" element={<Kyc />} />
     </Routes>
   );
 };

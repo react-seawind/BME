@@ -60,43 +60,45 @@ import NewExperience1 from "../Images/newexperience1.png";
 import NewExperience2 from "../Images/newexperience2.png";
 import NewExperience3 from "../Images/newexperience3.png";
 import NewExperience4 from "../Images/newexperience4.png";
-import Events1 from "../Images/events1.png";
-import Events2 from "../Images/events2.png";
-import Events3 from "../Images/events3.png";
-import Events4 from "../Images/events4.png";
-import Events5 from "../Images/events5.png";
-import FeaturedImg1 from "../Images/featured1.png";
-import FeaturedImg2 from "../Images/featured2.png";
-import FeaturedImg3 from "../Images/featured3.png";
-import FeaturedImg4 from "../Images/featured4.png";
-import FeaturedImg5 from "../Images/featured5.png";
-import FeaturedImg6 from "../Images/featured6.png";
-import FeaturedImg7 from "../Images/featured7.png";
+import NewExperience5 from "../Images/newexperience5.png";
+import NewExperience6 from "../Images/newexperience6.png";
+import Events1 from "../Images/ne8.jpg";
+import Events2 from "../Images/ne2.jpg";
+import Events3 from "../Images/ne3.jpg";
+import Events4 from "../Images/ne4.jpg";
+import Events5 from "../Images/ne6.jpg";
+import FeaturedImg1 from "../Images/ne5.jpg";
+import FeaturedImg2 from "../Images/ne6.jpg";
+import FeaturedImg3 from "../Images/ne4.jpg";
+import FeaturedImg4 from "../Images/ne2.jpg";
+import FeaturedImg5 from "../Images/ne3.jpg";
+import FeaturedImg6 from "../Images/ne4.jpg";
+import FeaturedImg7 from "../Images/ne5.jpg";
 import FeaturedImg8 from "../Images/featured8.png";
-import OutdoorImg1 from "../Images/outdoorevent1.png";
+import OutdoorImg1 from "../Images/ne8.jpg";
 import OutdoorImg2 from "../Images/outdoorevent2.png";
-import OutdoorImg3 from "../Images/events3.png";
+import OutdoorImg3 from "../Images/ne2.jpg";
 import OutdoorImg4 from "../Images/outdoorevent4.png";
-import OutdoorImg5 from "../Images/outdoorevent5.png";
+import OutdoorImg5 from "../Images/ne4.jpg";
 import OutdoorImg6 from "../Images/outdoorevent6.png";
-import OutdoorImg7 from "../Images/outdoorevent7.png";
+import OutdoorImg7 from "../Images/ne7.jpg";
 import OutdoorImg8 from "../Images/outdoorevent8.png";
 import OutdoorImg9 from "../Images/outdoorevent9.png";
 import OutdoorImg10 from "../Images/outdoorevent10.png";
-import MusicImg from "../Images/music1.png";
-import MusicImg2 from "../Images/music2.png";
-import MusicImg3 from "../Images/music3.png";
-import MusicImg4 from "../Images/music4.png";
+import MusicImg from "../Images/m1.png";
+import MusicImg2 from "../Images/m2.png";
+import MusicImg3 from "../Images/m3.png";
+import MusicImg4 from "../Images/m4.png";
 import MusicImg5 from "../Images/music5.png";
 import MusicImg6 from "../Images/music6.png";
 
-import ComdeyImg1 from "../Images/comedy1.png";
-import ComdeyImg2 from "../Images/comedy2.png";
-import ComdeyImg3 from "../Images/comedy3.png";
-import ComdeyImg4 from "../Images/comedy4.png";
+import ComdeyImg1 from "../Images/c1.jpg";
+import ComdeyImg2 from "../Images/c2.jpg";
+import ComdeyImg3 from "../Images/c3.jpg";
+import ComdeyImg4 from "../Images/c4.jpg";
 import ComdeyImg5 from "../Images/comedy5.png";
 import ComdeyImg6 from "../Images/comedy6.png";
-import Events6 from "../Images/featured2.png";
+import Events6 from "../Images/ne7.jpg";
 import Events7 from "../Images/featured3.png";
 import Events8 from "../Images/featured4.png";
 import Artist1 from "../Images/artist1.png";
@@ -162,8 +164,8 @@ const NewExperiencedata = [
   { img: NewExperience2 },
   { img: NewExperience3 },
   { img: NewExperience4 },
-  { img: NewExperience2 },
-  { img: NewExperience1 },
+  { img: NewExperience5 },
+  { img: NewExperience6 },
 ];
 
 const buttondata = [
@@ -184,7 +186,7 @@ const popularEventsdata = [
   },
   {
     img: Events3,
-    tittle: "Sonu Nigmam Live In Conceret - Surat",
+    tittle: "Kirtidhan gadhvi - Ahmedabad",
     des: "CB Patel Cricket Ground: Surat",
     link: "/BME/eventbook",
   },
@@ -196,13 +198,13 @@ const popularEventsdata = [
   },
   {
     img: Events4,
-    tittle: "Sachet-Parampara live in concert - Ahmedabad",
+    tittle: "Kirtidhan gadhvi - Ahmedabad",
     des: "Venu To Be Announced: Ahmedabad Concerts",
     link: "/BME/eventbook",
   },
   {
     img: Events5,
-    tittle: "Jigardan gadhvi - Ahmedabad",
+    tittle: "Kirtidhan gadhvi - Ahmedabad",
     des: "Rajpath club: Ahmedabad Concerts",
     link: "/BME/eventbook",
   },
@@ -220,19 +222,19 @@ const popularEventsdata = [
   },
   {
     img: Events4,
-    tittle: "Sachet-Parampara live in concert - Ahmedabad",
+    tittle: "Kirtidhan gadhvi - Ahmedabad",
     des: "Venu To Be Announced: Ahmedabad Concerts",
     link: "/BME/eventbook",
   },
   {
     img: Events5,
-    tittle: "Jigardan gadhvi - Ahmedabad",
+    tittle: "Kirtidhan gadhvi - Ahmedabad",
     des: "Rajpath club: Ahmedabad Concerts",
     link: "/BME/eventbook",
   },
   {
     img: Events3,
-    tittle: "Sonu Nigmam Live In Conceret - Surat",
+    tittle: "Kirtidhan gadhvi - Ahmedabad",
     des: "CB Patel Cricket Ground: Surat",
     link: "/BME/eventbook",
   },
@@ -247,7 +249,7 @@ const featuredeventdata = [
     link: "/BME/event",
   },
   {
-    img: FeaturedImg3,
+    img: FeaturedImg8,
     tittle1: "12-12-2023",
     tittle2: "Offline",
     price: "1000",
@@ -307,27 +309,27 @@ const outDoorEventsdata = [
   },
   {
     link: "/BME/event",
-    img: OutdoorImg7,
-
-    tittle: "Falguni Pathak Live - Ahmedabad",
-    des: "Gift City: Ghandhinagar Concerts ",
+    img: OutdoorImg3,
+    tittle: "Kirtidan Gadhvi Live - Ahmedabad",
+    des: "CB Patel Cricket Ground: Surat  ",
   },
   {
     link: "/BME/event",
-    img: OutdoorImg3,
-    tittle: "Sonu Nigmam Live - Ahmedabad",
-    des: "CB Patel Cricket Ground: Surat  ",
+    img: OutdoorImg7,
+
+    tittle: "Zakir Hussain Live - Ahmedabad",
+    des: "Gift City: Ghandhinagar Concerts ",
   },
   {
     link: "/BME/event",
     img: OutdoorImg6,
     tittle: "Kirtidhan Gadhvi- Ahmedabad",
-    des: "Lawis Green Party Plot: Ahmedabad Concerts ",
+    des: "Lavish Green Party Plot: Ahmedabad Concerts ",
   },
   {
     link: "/BME/event",
     img: OutdoorImg5,
-    tittle: "Akshar River Cruise",
+    tittle: "Kinjal Dave",
     des: "Sabarmati Riverfront: Ahmedabad Concerts ",
   },
   {
@@ -439,62 +441,80 @@ const comedydata = [
     link: "/BME/event",
     img: ComdeyImg1,
     date: "Sun, 11 Feb",
+    tittle2: "Offline",
+    price: "700",
     tittle: "The Comedy Factory Live  - Ahmedabad",
     des: "Savanna Party Lawn: Ahmedabad",
   },
   {
     link: "/BME/event",
     img: ComdeyImg6,
-    date: "",
+    date: "Sun, 11 Feb",
+    tittle2: "Offline",
+    price: "700",
     tittle: "Sanjay Goradia Live",
     des: "HK Hall, Ellisbridge: Ahmedabad",
   },
   {
     link: "/BME/event",
     img: ComdeyImg5,
-    date: "",
+    date: "Sun, 11 Feb",
+    tittle2: "Offline",
+    price: "700",
     tittle: "GujjuBhai Comedy Live",
     des: "NHK Hall, Ellisbridge: Ahmedabad",
   },
   {
     link: "/BME/event",
     img: ComdeyImg3,
-    date: "",
+    date: "Sun, 11 Feb",
+    tittle2: "Offline",
+    price: "700",
     tittle: "Manan Desai and Chiryu Mistry Live - Ahmedabad",
     des: "Mehendi Navaz Jung Hall: Ahmedabad",
   },
   {
     link: "/BME/event",
     img: ComdeyImg4,
-    date: "",
+    date: "Sun, 11 Feb",
+    tittle2: "Offline",
+    price: "700",
     tittle: "Chiryu Mistry Live - Ahmedabad",
     des: "Cheese Box Studios: Ahmedabad",
   },
   {
     link: "/BME/event",
     img: ComdeyImg2,
-    date: "",
+    date: "Sun, 11 Feb",
+    tittle2: "Offline",
+    price: "700",
     tittle: "Manan Desai Live - Ahmedabad",
     des: "Cheese Box Studios: Ahmedabad",
   },
   {
     link: "/BME/event",
     img: ComdeyImg6,
-    date: "",
+    date: "Sun, 11 Feb",
+    tittle2: "Offline",
+    price: "700",
     tittle: "Sanjay Goradia Live",
     des: "HK Hall, Ellisbridge: Ahmedabad",
   },
   {
     link: "/BME/event",
     img: ComdeyImg4,
-    date: "",
+    date: "Sun, 11 Feb",
+    tittle2: "Offline",
+    price: "700",
     tittle: "Chiryu Mistry Live - Ahmedabad",
     des: "Cheese Box Studios: Ahmedabad",
   },
   {
     link: "/BME/event",
     img: ComdeyImg3,
-    date: "",
+    date: "Sun, 11 Feb",
+    tittle2: "Offline",
+    price: "700",
     tittle: "Manan Desai and Chiryu Mistry Live - Ahmedabad",
     des: "Mehendi Navaz Jung Hall: Ahmedabad",
   },
@@ -502,6 +522,8 @@ const comedydata = [
     link: "/BME/event",
     img: ComdeyImg1,
     date: "Sun, 11 Feb",
+    tittle2: "Offline",
+    price: "700",
     tittle: "The Comedy Factory Live  - Ahmedabad",
     des: "Savanna Party Lawn: Ahmedabad",
   },
@@ -587,65 +609,65 @@ const broseeventdata = [
     logo: <RiComputerLine />,
     link: "/BME/event",
     tittle: "Workshops",
-    link2: "",
+    link2: "/BME",
     des: "154 events",
-    link3: "",
+    link3: "/BME",
   },
   {
     logo: <RiGraduationCapLine />,
     link: "/BME/event",
     tittle: "Courses",
-    link2: "",
+    link2: "/BME",
     des: "73 events",
-    link3: "",
+    link3: "/BME",
   },
   {
     logo: <GiTheaterCurtains />,
     link: "/BME/event",
     tittle: "Theatre & Arts",
-    link2: "",
+    link2: "/BME",
     des: "35 events",
-    link3: "",
+    link3: "/BME",
   },
   {
     logo: <LuHeartPulse />,
     link: "/BME/event",
     tittle: "Helath & Wellness",
-    link2: "",
+    link2: "/BME",
     des: "34 events",
-    link3: "",
+    link3: "/BME",
   },
   {
     logo: <TbMoodKid />,
     link: "/BME/event",
     tittle: "Kids",
-    link2: "",
+    link2: "/BME",
     des: "16 events",
-    link3: "",
+    link3: "/BME",
   },
   {
     logo: <HiOutlineMusicNote />,
     link: "/BME/event",
     tittle: "Music",
-    link2: "",
+    link2: "/BME",
     des: "15 events",
-    link3: "",
+    link3: "/BME",
   },
   {
     logo: <CgGames />,
     link: "/BME/event",
     tittle: "Games & Quizzes",
-    link2: "",
+    link2: "/BME",
     des: "12 events",
-    link3: "",
+    link3: "/BME",
   },
   {
     logo: <BsPeople />,
     link: "/BME/event",
     tittle: "Talks",
-    link2: "",
+    link2: "/BME",
     des: "10 events",
-    link3: "",
+    link3: "/BME",
   },
 ];
 
@@ -659,7 +681,7 @@ const bannerdata = [
 const eventdata1 = [
   {
     img: Events1,
-    tittle: "Kirtidan Gadhvi",
+    tittle: "Zakir Khan",
     des: "Gujarati",
     price: "100",
     link: "/BME/eventbook",
@@ -673,28 +695,28 @@ const eventdata1 = [
   },
   {
     img: Events3,
-    tittle: "Sonu Nigam",
+    tittle: "Kirtidan Gadhvi",
     des: "Hindi",
     link: "/BME/eventbook",
     price: "100",
   },
   {
     img: Events4,
-    tittle: "Sachet-Parampara",
+    tittle: "Kirtidan Gadhvi",
     des: "Hindi",
     price: "100",
     link: "/BME/eventbook",
   },
   {
     img: Events5,
-    tittle: "Aditya Gadhvi",
+    tittle: "Kinjal Dave",
     des: "Gujarati",
     price: "100",
     link: "/BME/eventbook",
   },
   {
     img: Events6,
-    tittle: "Gaman Santhal",
+    tittle: "Zakir Hussain",
     des: "Gujarati",
     price: "100",
     link: "/BME/eventbook",

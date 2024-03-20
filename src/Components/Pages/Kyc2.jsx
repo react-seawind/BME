@@ -78,12 +78,15 @@
 
 // export default Kyc2;
 
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const Kyc2 = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const mynav = useNavigate();
   const formik = useFormik({
     initialValues: {

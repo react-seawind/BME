@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Stepper } from "react-form-stepper";
 import { MdCurrencyRupee } from "react-icons/md";
 import { FaMinus, FaPlus } from "react-icons/fa6";
@@ -262,6 +262,9 @@ const Confirmation = () => {
 };
 
 const Steps = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [activeStep, setActiveStep] = useState(0);
 
   const steps = [

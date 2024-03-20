@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaCalendar, FaEdit, FaPlus, FaRegTrashAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { RxCross2 } from "react-icons/rx";
@@ -24,6 +24,9 @@ const validationSchema = Yup.object().shape({
 });
 
 const Ticket = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   // -----------------------------Add addresspopup-----------------------------
   const [addadd, setaddadd] = useState(false);
 

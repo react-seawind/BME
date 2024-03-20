@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import EventBookImg from "../../Images/eventinnerbanner.jpeg";
 import { Link } from "react-router-dom";
 import { FaLocationDot } from "react-icons/fa6";
@@ -12,6 +12,9 @@ import Slider from "react-slick";
 import { popularEventsdata } from "../API";
 
 const EventBook = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   // ==============================About Part=======================================
   const [about, setAbout] = useState(false);
 

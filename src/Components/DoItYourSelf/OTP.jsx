@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { IoIosLaptop } from "react-icons/io";
 import { GoClock } from "react-icons/go";
 import { MdMonitor } from "react-icons/md";
@@ -6,6 +6,9 @@ import LogoImg from "../../Images/newlogo.png";
 import { Link } from "react-router-dom";
 
 const OTP = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       {" "}

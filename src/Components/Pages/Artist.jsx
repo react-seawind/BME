@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { artistdata } from "../API";
 import { Link } from "react-router-dom";
 
 const Artist = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="container mx-auto my-9">
       <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7">

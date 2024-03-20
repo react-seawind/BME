@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import pdf from "../../Images/dummy.pdf";
 import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
@@ -15,11 +15,15 @@ const Kyc3 = () => {
     }),
     onSubmit: (values) => {
       sessionStorage.setItem("BMEKYC3", JSON.stringify(values));
-      mynav("/BME/editprofile"); // Corrected the navigation to kyc-3
+      mynav("/BME/profile"); // Corrected the navigation to kyc-3
       // Clear form values
       formik.resetForm();
     },
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="container lg:w-2/3 px-4 mx-auto my-10">
       <div className=" bg-white p-5">

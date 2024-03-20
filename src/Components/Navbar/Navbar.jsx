@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import MainLogo from "../../Images/newlogo.png";
@@ -33,14 +33,17 @@ import Country from "../../Images/indianflag.png";
 import { Link } from "react-router-dom";
 
 export default function Example({ color }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [showModal, setShowModal] = React.useState(false);
   const [openTab, setOpenTab] = React.useState(1);
 
   const navigation1 = [
     { name: "Events", href: "/BME/event", current: true },
-    { name: "Plays", href: "#", current: false },
-    { name: "Sports", href: "#", current: false },
-    { name: "Activites", href: "#", current: false },
+    { name: "Plays", href: "/BME", current: false },
+    { name: "Sports", href: "/BME", current: false },
+    { name: "Activites", href: "/BME", current: false },
   ];
 
   const navigation2 = [
@@ -57,46 +60,46 @@ export default function Example({ color }) {
     {
       name: "hindi",
       subdata: [
-        { link: "", des: "12th Fail(U)" },
-        { link: "", des: "Animal(A)" },
-        { link: "", des: "Argylle (Hindi) (UA)" },
-        { link: "", des: "Dil To Pagal Hai(U)" },
-        { link: "", des: "Dunki(UA)" },
-        { link: "", des: "Fighter" },
-        { link: "", des: "Hanu-Man (Hindi) (UA)" },
-        { link: "", des: "Karma (1986) (UA)" },
-        { link: "", des: "Merry Christmas (UA)" },
+        { link: "/BME", des: "12th Fail(U)" },
+        { link: "/BME", des: "Animal(A)" },
+        { link: "/BME", des: "Argylle (Hindi) (UA)" },
+        { link: "/BME", des: "Dil To Pagal Hai(U)" },
+        { link: "/BME", des: "Dunki(UA)" },
+        { link: "/BME", des: "Fighter" },
+        { link: "/BME", des: "Hanu-Man (Hindi) (UA)" },
+        { link: "/BME", des: "Karma (1986) (UA)" },
+        { link: "/BME", des: "Merry Christmas (UA)" },
       ],
     },
     {
       name: "Gujarati",
       subdata: [
-        { link: "", des: "Chaal Jeevi Laiye (U)" },
-        { link: "", des: "Danny Jigar - Ek Matra (UA)" },
-        { link: "", des: "Hurry Om Hurry (UA)" },
-        { link: "", des: "Itta Kitta (U)" },
-        { link: "", des: "Jigia E to Jamaavat Kari (UA)" },
-        { link: "", des: "Kamthaan (UA)" },
-        { link: "", des: "Mara Papa Superhero (U)" },
-        { link: "", des: "My Dear Pappa (UA)" },
+        { link: "/BME", des: "Chaal Jeevi Laiye (U)" },
+        { link: "/BME", des: "Danny Jigar - Ek Matra (UA)" },
+        { link: "/BME", des: "Hurry Om Hurry (UA)" },
+        { link: "/BME", des: "Itta Kitta (U)" },
+        { link: "/BME", des: "Jigia E to Jamaavat Kari (UA)" },
+        { link: "/BME", des: "Kamthaan (UA)" },
+        { link: "/BME", des: "Mara Papa Superhero (U)" },
+        { link: "/BME", des: "My Dear Pappa (UA)" },
       ],
     },
     {
       name: "Tamil",
-      subdata: [{ link: "", des: "Vadakkupatti Ramasamy (U)" }],
+      subdata: [{ link: "/BME", des: "Vadakkupatti Ramasamy (U)" }],
     },
     {
       name: "English",
       subdata: [
-        { link: "", des: "Anatomy Of A Fail (UA)" },
-        { link: "", des: "Argylle" },
-        { link: "", des: "Next Goal Wins (UA)" },
-        { link: "", des: "The Beekeeper (A)" },
+        { link: "/BME", des: "Anatomy Of A Fail (UA)" },
+        { link: "/BME", des: "Argylle" },
+        { link: "/BME", des: "Next Goal Wins (UA)" },
+        { link: "/BME", des: "The Beekeeper (A)" },
       ],
     },
     {
       name: "Telugu",
-      subdata: [{ link: "", des: "Ambajipeta Marriage Band (UA)" }],
+      subdata: [{ link: "/BME", des: "Ambajipeta Marriage Band (UA)" }],
     },
   ];
 
@@ -146,7 +149,7 @@ export default function Example({ color }) {
     { id: "3", link: "/BME/offers", label: "Offers", icons: <BiSolidOffer /> },
     {
       id: "4",
-      // link: "/BME/editprofile",
+      // link: "/BME/profile",
       label: "Profile",
       icons: <MdAccountCircle />,
     },
@@ -302,7 +305,7 @@ export default function Example({ color }) {
                                 <MdAccountCircle className="mt-2 text-gray-600" />
                               </h2>
                               <Link
-                                to="/BME/editprofile"
+                                to="/BME/profile"
                                 onClick={() => setNav(false)}
                               >
                                 <p className="flex text-sm">
@@ -371,7 +374,7 @@ export default function Example({ color }) {
                       <Disclosure.Button
                         key={item.name}
                         as="a"
-                        href={item.href}
+                        to={item.href}
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
@@ -436,7 +439,7 @@ export default function Example({ color }) {
                               to={item.href}
                               className={classNames(
                                 item.current ? " text-black " : "text-black  ",
-                                "rounded-md px-2 py-3 text-[0.975rem] font-medium"
+                                "rounded-md px-2 py-3 text-[1.1rem] font-medium  "
                               )}
                               aria-current={item.current ? "page" : undefined}
                             >
@@ -454,7 +457,7 @@ export default function Example({ color }) {
                               to={item.href}
                               className={classNames(
                                 item.current ? " text-black" : "text-black ",
-                                "rounded-md px-2 py-3 text-[0.975rem] font-medium"
+                                "rounded-md px-2 py-3 text-[1.1rem] font-medium"
                               )}
                               aria-current={item.current ? "page" : undefined}
                             >
@@ -567,10 +570,14 @@ export default function Example({ color }) {
                 </div>
                 <button
                   className="bg-themecolor1 mx-14 p-2 text-white rounded-md"
-                  onClick={() => setShowOTP(true)}
+                  onClick={() => {
+                    setShowOTP(true);
+                    setloginpopup(false);
+                  }}
                 >
                   Continue
                 </button>
+
                 <p className="text-xs block m-auto text-gray-500 py-5">
                   I agree to the{" "}
                   <a
@@ -649,7 +656,10 @@ export default function Example({ color }) {
                       Back
                     </button>
                     <Link
-                      to={"/BME/editprofile"}
+                      to={"/BME/profile"}
+                      onClick={() => {
+                        setShowOTP(false);
+                      }}
                       className="bg-themecolor1 mx-5 p-2 text-white  text-center rounded-md"
                     >
                       Verify OTP

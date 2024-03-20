@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import image from "../../Images/artist1.png";
 
 const Artistdetail = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <div className="bg-slate-800">

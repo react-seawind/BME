@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ContactusImg from "../../Images/contactus.jpg";
 import Breadcrumb from "../Breadcumb/Breadcumb";
 import { FaEnvelope, FaMap, FaPhone } from "react-icons/fa";
@@ -6,6 +6,9 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const formik = useFormik({
     initialValues: {
       firstName: "",

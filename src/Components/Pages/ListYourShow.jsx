@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import BannerLst1 from "../../Images/bannerlst1.jpg";
 import BannerLst2 from "../../Images/bannerlst2.jpg";
@@ -24,6 +24,9 @@ const ListYourShow = () => {
     setSelectedItem1(null);
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const bannerLst = {
     className: "center",
     centerMode: true,

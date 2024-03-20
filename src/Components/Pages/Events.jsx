@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 
 import { Link } from "react-router-dom";
@@ -77,15 +77,22 @@ const Events = () => {
     setPrice(!Price);
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       {/*=================================== Banners data======================================== */}
       <div className="Mainslider outline-none">
-        <Slider {...bannerS}>
+        <Slider {...bannerS} className="main-banner">
           {bannerdata.map((val, index) => {
             return (
               <div className="outline-none w-full" key={index}>
-                <img src={val.img} alt="" className="w-full h-40 md:h-96" />
+                <img
+                  src={val.img}
+                  alt=""
+                  className="w-full h-52 md:h-96 lg:h-[33rem]   "
+                />
               </div>
             );
           })}

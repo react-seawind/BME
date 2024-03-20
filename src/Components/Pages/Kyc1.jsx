@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Kyc1 = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [showhide1, setShowhide1] = useState("yes");
   const handleshow1 = (e) => {
     const getshow1 = e.target.value;

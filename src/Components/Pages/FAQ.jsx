@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import bgimage from "../../Images/faqbanner.jpg";
 import { IoChevronDownOutline } from "react-icons/io5";
 
@@ -45,6 +45,9 @@ const FAQ = () => {
       </div>
     );
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>

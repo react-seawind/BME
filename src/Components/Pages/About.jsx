@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import bgimage from "../../Images/abtimage.jpg";
 import Breadcrumb from "../Breadcumb/Breadcumb";
 
 const About = () => {
   const breadcrumbItems = [{ text: "About" }];
   const backgroundImage = bgimage;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Breadcrumb items={breadcrumbItems} backgroundImage={backgroundImage} />

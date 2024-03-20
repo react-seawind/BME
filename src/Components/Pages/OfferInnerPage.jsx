@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import OfferInnerPageImg from "../../Images/offerinerpage.png";
 import BankImg1 from "../../Images/bank1.png";
 import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
 
 const OfferInnerPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [maxnum, setMaxnum] = useState(false);
   const togglemaxnum = () => {
     setMaxnum(!maxnum);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Offers.css";
 import { CiCreditCard1 } from "react-icons/ci";
 import { IoTicketOutline } from "react-icons/io5";
@@ -17,7 +17,9 @@ import { Link } from "react-router-dom";
 
 const Offers = () => {
   const [openTab, setOpenTab] = React.useState(1);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       {/*================================================== Search Bar======================================== */}

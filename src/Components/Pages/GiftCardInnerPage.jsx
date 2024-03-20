@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import GiftCardImg from "../../Images/giftcard.png";
 
 const GiftCardInnerPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="=">
       <div className="  relative  container mx-auto w-full">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import GiftCardImg from "../../Images/giftcard.png";
 import GenricImg from "../../Images/genricimg.png";
 import OccasionImg from "../../Images/occasion.png";
@@ -8,6 +8,9 @@ import { MdCurrencyRupee } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const GiftCards = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [openTab, setOpenTab] = React.useState(1);
   const [openTab1, setOpenTab1] = React.useState(1);
 

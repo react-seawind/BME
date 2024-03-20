@@ -1,7 +1,10 @@
 // Breadcrumb.js
-import React from "react";
+import React, { useEffect } from "react";
 
 const Breadcrumb = ({ items, backgroundImage }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const breadcrumbStyle = {
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: "contain",
